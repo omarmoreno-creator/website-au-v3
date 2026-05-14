@@ -1,0 +1,7 @@
+# Atlantis University - robots.txt
+# Allow all well-behaved crawlers (including search engines and LLM crawlers)
+
+User-agent: *
+Allow: /
+
+Sitemap: https://atlantisuniversity.edu/sitemap.xml
