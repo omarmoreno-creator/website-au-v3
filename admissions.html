@@ -100,6 +100,20 @@
     .tuition-table .price { font-weight: 500; font-variant-numeric: tabular-nums; }
     .tuition-note { margin-top: 0.75rem; font-size: var(--fs-small); color: var(--color-muted-foreground); }
 
+    .programs-tuition-section { padding: 5rem 0; border-bottom: 1px solid var(--color-border); }
+    .programs-tuition__intro { max-width: 56rem; margin-bottom: 2.5rem; }
+    .programs-tuition__intro h2 { margin-top: 0.75rem; }
+    .programs-tuition__intro p { margin-top: 1rem; color: var(--color-muted-foreground); line-height: 1.65; }
+    .programs-tuition-table { width: 100%; border-collapse: collapse; font-size: var(--fs-small); }
+    .programs-tuition-table caption { text-align: left; font-family: var(--font-sans); font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; font-size: var(--fs-eyebrow); color: var(--color-muted-foreground); padding: 1.5rem 0 0.75rem; }
+    .programs-tuition-table th, .programs-tuition-table td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+    .programs-tuition-table th { font-family: var(--font-sans); font-weight: 600; font-size: var(--fs-eyebrow); text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-muted-foreground); background: var(--color-sand); }
+    .programs-tuition-table td.price, .programs-tuition-table td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .programs-tuition-table td.total { font-weight: 500; }
+    .programs-tuition-table tbody tr:hover { background: var(--color-sand); }
+    .programs-tuition-disclosure { margin-top: 1.5rem; font-size: var(--fs-small); color: var(--color-muted-foreground); line-height: 1.65; max-width: 56rem; }
+    .programs-tuition-disclosure strong { color: var(--color-foreground); }
+
     .request-section {
       background: var(--color-sand); padding: 5rem 0; border-bottom: 1px solid var(--color-border);
     }
@@ -192,6 +206,87 @@
             <li><span>Registration fee (per semester)</span><span class="price">$50</span></li>
             <li><span>Graduation fee (one-time)</span><span class="price">$500</span></li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAM-LEVEL TUITION TABLE -->
+    <section class="programs-tuition-section" aria-labelledby="programs-tuition-heading">
+      <div class="container">
+        <div class="programs-tuition__intro">
+          <p class="eyebrow">Per-program tuition</p>
+          <h2 id="programs-tuition-heading">Total tuition by program</h2>
+          <p>Total program tuition is calculated as fee per credit hour multiplied by the credit hours required. Rates effective for the 2025–2026 academic year. Tuition is locked by your Enrollment Agreement as long as you maintain consecutive enrollment.</p>
+        </div>
+
+        <table class="programs-tuition-table">
+          <caption>Degree programs</caption>
+          <thead>
+            <tr>
+              <th scope="col">School</th>
+              <th scope="col">Level</th>
+              <th scope="col">Program</th>
+              <th scope="col">Credits</th>
+              <th scope="col">Length</th>
+              <th scope="col">Fee / credit</th>
+              <th scope="col">Total tuition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Business</td><td>Master</td><td>MS Business Administration</td><td class="num">30</td><td class="num">20 months</td><td class="price">$897</td><td class="price total">$26,910</td></tr>
+            <tr><td>Business</td><td>Master</td><td>Master in Business Administration (MBA)</td><td class="num">45</td><td class="num">24 months</td><td class="price">$897</td><td class="price total">$40,365</td></tr>
+            <tr><td>Business</td><td>Master</td><td>MS Real Estate Development</td><td class="num">30</td><td class="num">12 months</td><td class="price">$897</td><td class="price total">$26,910</td></tr>
+            <tr><td>Business</td><td>Master</td><td>MS Hospitality Management</td><td class="num">36</td><td class="num">16 months</td><td class="price">$897</td><td class="price total">$32,292</td></tr>
+            <tr><td>Business</td><td>Bachelor</td><td>BS Business Administration</td><td class="num">123</td><td class="num">41 months</td><td class="price">$450</td><td class="price total">$55,350</td></tr>
+            <tr><td>Business</td><td>Bachelor</td><td>BS Sports Management</td><td class="num">123</td><td class="num">41 months</td><td class="price">$450</td><td class="price total">$55,350</td></tr>
+            <tr><td>Business</td><td>Associate</td><td>AS Business Administration</td><td class="num">60</td><td class="num">20 months</td><td class="price">$450</td><td class="price total">$27,000</td></tr>
+            <tr><td>Business</td><td>Associate</td><td>AS International Business</td><td class="num">60</td><td class="num">20 months</td><td class="price">$450</td><td class="price total">$27,000</td></tr>
+
+            <tr><td>Information Technology</td><td>Master</td><td>MS Information Technology</td><td class="num">30</td><td class="num">20 months</td><td class="price">$897</td><td class="price total">$26,910</td></tr>
+            <tr><td>Information Technology</td><td>Master</td><td>MS Cybersecurity</td><td class="num">30</td><td class="num">16 months</td><td class="price">$897</td><td class="price total">$26,910</td></tr>
+            <tr><td>Information Technology</td><td>Master</td><td>MS Artificial Intelligence</td><td class="num">30</td><td class="num">16 months</td><td class="price">$897</td><td class="price total">$26,910</td></tr>
+            <tr><td>Information Technology</td><td>Bachelor</td><td>BS Information Technology</td><td class="num">123</td><td class="num">41 months</td><td class="price">$450</td><td class="price total">$55,350</td></tr>
+            <tr><td>Information Technology</td><td>Associate</td><td>AS Information Technology</td><td class="num">60</td><td class="num">20 months</td><td class="price">$450</td><td class="price total">$27,000</td></tr>
+
+            <tr><td>Engineering</td><td>Master</td><td>MS Computer Engineering</td><td class="num">30</td><td class="num">20 months</td><td class="price">$897</td><td class="price total">$26,910</td></tr>
+            <tr><td>Engineering</td><td>Bachelor</td><td>BS Computer Engineering</td><td class="num">123</td><td class="num">41 months</td><td class="price">$450</td><td class="price total">$50,430</td></tr>
+
+            <tr><td>Health</td><td>Master</td><td>MS Healthcare Management</td><td class="num">36</td><td class="num">20 months</td><td class="price">$897</td><td class="price total">$32,292</td></tr>
+            <tr><td>Health</td><td>Master</td><td>MS Nursing</td><td class="num">36</td><td class="num">12 months</td><td class="price">$897</td><td class="price total">$32,292</td></tr>
+            <tr><td>Health</td><td>Bachelor</td><td>BS Nursing (RN to BSN)</td><td class="num">123</td><td class="num">20 months</td><td class="price">$450</td><td class="price total">$27,000</td></tr>
+
+            <tr><td>Education</td><td>Master</td><td>MS Education</td><td class="num">36</td><td class="num">12 months</td><td class="price">$897</td><td class="price total">$32,292</td></tr>
+            <tr><td>Education</td><td>Master</td><td>MS Elementary Education</td><td class="num">36</td><td class="num">20 months</td><td class="price">$897</td><td class="price total">$32,292</td></tr>
+          </tbody>
+        </table>
+
+        <table class="programs-tuition-table" style="margin-top: 3rem;">
+          <caption>Non-degree programs</caption>
+          <thead>
+            <tr>
+              <th scope="col">Category</th>
+              <th scope="col">Program</th>
+              <th scope="col">Credits / Clock hours</th>
+              <th scope="col">Length</th>
+              <th scope="col">Total tuition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Graduate Certificate</td><td>Elementary Education</td><td class="num">21 credits / 336 clock hrs</td><td class="num">4 months</td><td class="price total">$14,205</td></tr>
+            <tr><td>Graduate Certificate</td><td>Special Education</td><td class="num">21 credits / 336 clock hrs</td><td class="num">4 months</td><td class="price total">$14,205</td></tr>
+            <tr><td>Diploma</td><td>Office Administrator</td><td class="num">336 clock hours</td><td class="num">8 months</td><td class="price total">$8,840</td></tr>
+            <tr><td>Diploma</td><td>Network Operations (NOP)</td><td class="num">192 clock hours</td><td class="num">4 months</td><td class="price total">$8,840</td></tr>
+            <tr><td>Diploma</td><td>Enterprise Cloud Professional (ECP)</td><td class="num">288 clock hours</td><td class="num">6 months</td><td class="price total">$13,260</td></tr>
+            <tr><td>Diploma</td><td>InfoSec Professional (ISP)</td><td class="num">240 clock hours</td><td class="num">4 months</td><td class="price total">$13,260</td></tr>
+            <tr><td>Diploma</td><td>Computer Information Technology (CIT)</td><td class="num">672 clock hours</td><td class="num">14 months</td><td class="price total">$28,000</td></tr>
+          </tbody>
+        </table>
+
+        <div class="programs-tuition-disclosure">
+          <p><strong>Tuition and fees disclosure.</strong> Tuition is charged by semester based on the number of credits enrolled. Diploma programs are charged by program, not by credit. Semester charges = Tuition fees + Semester fees. Semester fees per credit: <strong>$223.33</strong> for graduate programs, <strong>$80</strong> for undergraduate and diploma programs.</p>
+          <p style="margin-top: 1rem;"><strong>One-time fees.</strong> $150 application fee for undergraduate, graduate, and diploma programs. $500 graduation fee, due at the beginning of the last semester prior to graduation.</p>
+          <p style="margin-top: 1rem;"><strong>Learning materials.</strong> Textbooks are not included; estimate $100–$200 per course. Nursing students may have additional charges for uniforms, drug screening, and background checks.</p>
+          <p style="margin-top: 1rem;">Atlantis University reserves the right to adjust tuition and fees as necessary. Changes will be published 30 days in advance and posted publicly on campus.</p>
         </div>
       </div>
     </section>
