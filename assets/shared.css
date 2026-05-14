@@ -18,6 +18,10 @@
   --color-border: #e7e3da;
   --color-border-strong: #0d1117;
 
+  /* AU brand color (used for primary CTAs and brand accents) */
+  --color-brand: #d62836;
+  --color-brand-hover: #b81f2b;
+
   /* School accent colors */
   --school-business: #b0223a;
   --school-tech: #2752c2;
@@ -126,8 +130,8 @@ ul { list-style: none; }
   text-decoration: none;
   white-space: nowrap;
 }
-.btn--primary { background: var(--color-foreground); color: var(--color-background); }
-.btn--primary:hover { background: #1f2937; transform: translateY(-1px); }
+.btn--primary { background: var(--color-brand); color: #fff; }
+.btn--primary:hover { background: var(--color-brand-hover); transform: translateY(-1px); }
 .btn--secondary {
   background: var(--color-background);
   color: var(--color-foreground);
@@ -211,9 +215,10 @@ ul { list-style: none; }
 
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border-top: 4px solid var(--color-brand);
   border-bottom: 1px solid var(--color-border);
 }
 .site-header__inner {
@@ -238,10 +243,12 @@ ul { list-style: none; }
 }
 .site-header__request:hover { background: var(--color-sand); }
 .site-header__apply {
-  background: var(--color-foreground); color: var(--color-background);
+  background: var(--color-brand); color: #fff;
   padding: 0.5rem 1.25rem; border-radius: var(--radius-pill);
   font-size: var(--fs-small); font-weight: 600;
+  transition: background-color 150ms ease;
 }
+.site-header__apply:hover { background: var(--color-brand-hover); }
 .site-header__search {
   width: 2.25rem; height: 2.25rem;
   display: inline-flex; align-items: center; justify-content: center;
@@ -419,8 +426,8 @@ ul { list-style: none; }
 .hero--photo .hero__facts dt { color: rgba(255,255,255,0.7); }
 .hero--photo .hero__facts dd { color: #fff; }
 .hero--photo .hero__facts-row { border-color: rgba(255,255,255,0.15); }
-.hero--photo .btn--primary { background: #fff; color: var(--color-foreground); }
-.hero--photo .btn--primary:hover { background: rgba(255,255,255,0.9); transform: translateY(-1px); }
+.hero--photo .btn--primary { background: var(--color-brand); color: #fff; }
+.hero--photo .btn--primary:hover { background: var(--color-brand-hover); transform: translateY(-1px); }
 .hero--photo .btn--secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,0.4); }
 .hero--photo .btn--secondary:hover { background: rgba(255,255,255,0.08); }
 .hero--photo .btn--ghost { color: rgba(255,255,255,0.85); }
