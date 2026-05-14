@@ -19,8 +19,8 @@
   --color-border-strong: #0d1117;
 
   /* AU brand color (used for primary CTAs and brand accents) */
-  --color-brand: #d62836;
-  --color-brand-hover: #b81f2b;
+  --color-brand: #a92338;
+  --color-brand-hover: #871b2c;
 
   /* School accent colors */
   --school-business: #b0223a;
@@ -37,7 +37,7 @@
   --radius-pill: 9999px;
 
   /* Type scale (fluid) */
-  --fs-h1: clamp(3rem, 1.5rem + 6vw, 7.5rem);
+  --fs-h1: clamp(2.25rem, 1.25rem + 3.25vw, 4.5rem);
   --fs-h2: clamp(1.875rem, 1.25rem + 2vw, 2.75rem);
   --fs-h3: clamp(1.25rem, 1rem + 0.5vw, 1.5rem);
   --fs-lead: clamp(1.0625rem, 1rem + 0.25vw, 1.25rem);
