@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Atlantis University — Accredited Degree Programs in Miami, FL</title>
+  <meta name="description" content="Atlantis University is an ACCSC-accredited university in Doral, Miami offering on-campus, hybrid, and online bachelor's, master's, and certificate programs — including MBA, Artificial Intelligence, Healthcare Management, and Education — for U.S. and international students from Latin America and the Caribbean." />
+  <link rel="canonical" href="https://atlantisuniversity.edu/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Atlantis University — Miami, Florida" />
+  <meta property="og:description" content="Accredited degree and certificate programs in Miami. MBA, AI, Healthcare Management, Education and more — on-campus, hybrid and online. F-1 visa support for international students." />
+  <meta property="og:url" content="https://atlantisuniversity.edu/" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Page-specific JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is Atlantis University accredited?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Atlantis University is accredited by the Accrediting Commission of Career Schools and Colleges (ACCSC) and authorized by the Florida Department of Education, Commission for Independent Education." } },
+      { "@type": "Question", "name": "Where is the campus located?", "acceptedAnswer": { "@type": "Answer", "text": "The main campus is in Doral, in the Miami metropolitan area, at 1442 NW 107th Ave, Doral, FL 33172." } },
+      { "@type": "Question", "name": "What languages are courses taught in?", "acceptedAnswer": { "@type": "Answer", "text": "Most degree programs are taught in English. The Intensive English Program (IEP) and select bilingual offerings support students whose first language is Spanish or Portuguese." } },
+      { "@type": "Question", "name": "Does Atlantis University accept international students?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The university is authorized to enroll non-immigrant students and issues Form I-20 for F-1 student visa applicants. Dedicated international advisors support students from Latin America and the Caribbean." } },
+      { "@type": "Question", "name": "Are programs available online?", "acceptedAnswer": { "@type": "Answer", "text": "Several degree and certificate programs are available fully online or in a hybrid format. Specific modality is listed on each program page." } },
+      { "@type": "Question", "name": "How do I apply?", "acceptedAnswer": { "@type": "Answer", "text": "Submit the online application, official transcripts, a government-issued ID, and (for international applicants) proof of English proficiency or IEP placement. Detailed steps are on the Admissions page." } },
+      { "@type": "Question", "name": "What featured degree programs does Atlantis University offer?", "acceptedAnswer": { "@type": "Answer", "text": "Featured programs include the Master of Business Administration (MBA), Artificial Intelligence, Healthcare Management, and Education. The full catalog is on the Programs page." } },
+      { "@type": "Question", "name": "How much does tuition cost?", "acceptedAnswer": { "@type": "Answer", "text": "Tuition varies by program and modality. Per-credit tuition, fees, and payment plans are listed on the Admissions page. Atlantis University also offers institutional scholarships and accepts approved federal and private financing." } },
+      { "@type": "Question", "name": "How long does it take to complete a degree?", "acceptedAnswer": { "@type": "Answer", "text": "Bachelor's degrees typically take about 4 years full-time and the MBA takes about 18–24 months. Transfer credits and prior learning assessments can shorten time-to-degree. Certificates can be completed in under 12 months." } },
+      { "@type": "Question", "name": "Can I transfer credits from another university?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Atlantis University accepts transfer credits from accredited U.S. and international institutions. Submit official transcripts during the application process for an evaluation by the Registrar's Office." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/shared.css" />
+
+  <style>
+    /* Home-specific */
+    .hero { padding: 5rem 0; border-bottom: 1px solid var(--color-border); }
+    @media (min-width: 768px) { .hero { padding: 7rem 0; } }
+    .hero__grid { display: grid; gap: 3rem; }
+    @media (min-width: 768px) { .hero__grid { grid-template-columns: repeat(12, 1fr); gap: 4rem; } }
+    .hero__content { grid-column: span 12; }
+    .hero__aside { grid-column: span 12; }
+    @media (min-width: 768px) {
+      .hero__content { grid-column: span 8; }
+      .hero__aside { grid-column: span 4; }
+    }
+    .hero__location { display: inline-flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+    .hero__location-rule { display: inline-block; width: 2rem; height: 1px; background: rgba(13, 17, 23, 0.4); }
+    .hero__title { max-width: 18ch; }
+    .hero__lead { margin-top: 2rem; max-width: 36rem; font-size: var(--fs-lead); line-height: 1.65; color: var(--color-muted-foreground); }
+    .hero__ctas { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .hero__fineprint { margin-top: 1.5rem; font-size: var(--fs-small); color: var(--color-muted-foreground); }
+    .hero__facts { background: var(--color-sand); border: 1px solid var(--color-border); border-radius: 1.25rem; padding: 1.75rem; }
+    .hero__facts-title { font-family: var(--font-sans); font-size: var(--fs-eyebrow); font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-muted-foreground); margin-bottom: 1.25rem; }
+    .hero__facts dl { display: flex; flex-direction: column; gap: 1rem; }
+    .hero__facts-row { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.875rem; border-bottom: 1px solid var(--color-border); }
+    .hero__facts-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .hero__facts dt { font-size: var(--fs-small); color: var(--color-muted-foreground); }
+    .hero__facts dd { font-size: var(--fs-small); font-weight: 500; text-align: right; }
+
+    .authority { background: var(--color-sand); border-bottom: 1px solid var(--color-border); padding: 4rem 0; }
+    .authority__grid { display: grid; gap: 2.5rem; }
+    @media (min-width: 768px) { .authority__grid { grid-template-columns: repeat(3, 1fr); } }
+    .authority__item { border-top: 1px solid var(--color-border-strong); padding-top: 1.5rem; }
+    .authority__item h3 { margin: 0.75rem 0; }
+    .authority__item p { font-size: var(--fs-small); color: var(--color-muted-foreground); line-height: 1.65; }
+
+    .featured__head { display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; margin-bottom: 3.5rem; }
+    @media (min-width: 768px) { .featured__head { flex-direction: row; align-items: flex-end; } }
+    .featured__intro { max-width: 38rem; }
+    .featured__intro h2 { margin-top: 0.75rem; }
+    .featured__intro p { margin-top: 1rem; color: var(--color-muted-foreground); line-height: 1.65; }
+    .featured__see-all { font-size: var(--fs-small); font-weight: 500; text-underline-offset: 4px; }
+    .featured__see-all:hover { text-decoration: underline; }
+    .featured__grid { display: grid; gap: 1.25rem; }
+    @media (min-width: 768px) { .featured__grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .schools__head { margin-bottom: 3.5rem; max-width: 56rem; }
+    .schools__head h2 { margin-top: 0.75rem; }
+    .schools__head p { margin-top: 1rem; color: var(--color-muted-foreground); max-width: 38rem; line-height: 1.65; }
+    .schools__view-all { display: inline-block; margin-top: 1rem; font-size: var(--fs-small); font-weight: 500; }
+    .schools__view-all:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .schools__grid { display: grid; gap: 1.25rem; }
+    @media (min-width: 768px) { .schools__grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .schools__grid { grid-template-columns: repeat(3, 1fr); } }
+    .school-card {
+      position: relative; background: var(--color-card); border: 1px solid var(--color-border);
+      border-radius: var(--radius-card); padding: 2rem; min-height: 16rem;
+      display: flex; flex-direction: column;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+    .school-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px -12px rgba(0,0,0,0.12); }
+    .school-card__bar { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+    .school-card__title { margin: 1.25rem 0 0.75rem; }
+    .school-card__desc { font-size: var(--fs-small); color: var(--color-muted-foreground); line-height: 1.65; }
+    .school-card__foot { margin-top: auto; padding-top: 2rem; display: flex; align-items: center; justify-content: space-between; font-size: var(--fs-small); }
+    .school-card__count { color: var(--color-muted-foreground); }
+    .school-card__cta { font-weight: 500; transition: transform 200ms; }
+    .school-card:hover .school-card__cta { transform: translateX(4px); }
+
+    .midcta {
+      margin-top: 3.5rem; display: flex; flex-wrap: wrap;
+      align-items: center; justify-content: center; gap: 0.75rem;
+      padding: 2rem 1.5rem; background: var(--color-sand);
+      border: 1px solid var(--color-border); border-radius: 1.25rem; text-align: center;
+    }
+
+    .audiences__intro { max-width: 38rem; margin-bottom: 3rem; }
+    .audiences__intro h2 { margin-bottom: 1rem; }
+    .audiences__intro p { color: var(--color-muted-foreground); line-height: 1.65; }
+    .audiences__grid { display: grid; gap: 2.5rem; }
+    @media (min-width: 768px) { .audiences__grid { grid-template-columns: repeat(3, 1fr); } }
+    .audience { display: block; border-top: 1px solid var(--color-border-strong); padding-top: 1.5rem; }
+    .audience h3 { margin-bottom: 0.75rem; }
+    .audience p { color: var(--color-muted-foreground); line-height: 1.65; margin-bottom: 1.25rem; }
+    .audience__cta { font-size: var(--fs-small); font-weight: 500; transition: transform 200ms; display: inline-block; }
+    .audience:hover .audience__cta { transform: translateX(4px); }
+  </style>
+</head>
+
+<body>
+  <!-- SITE HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a href="/" class="site-header__brand" aria-label="Atlantis University home" aria-current="page">Atlantis<span>University</span></a>
+      <nav class="site-header__nav" aria-label="Primary">
+        <a href="/programs">Programs</a>
+        <a href="/admissions">Admissions</a>
+        <a href="/international">International</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <a href="/admissions#request-info" class="site-header__request">Request info</a>
+        <a href="/admissions#apply" class="site-header__apply">Apply now</a>
+        <button type="button" class="site-header__search" aria-label="Open search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="hero__location eyebrow">
+            <span class="hero__location-rule" aria-hidden="true"></span>
+            Miami, Florida · Est. 2010
+          </p>
+          <h1 id="hero-title" class="hero__title">Accredited degree programs in Miami&nbsp;— for U.S. and international students.</h1>
+          <p class="hero__lead">Atlantis University is an ACCSC-accredited university in Doral, Miami offering bachelor's, master's, and certificate programs across six schools. Study on-campus, hybrid, or online — with dedicated F-1 visa support for international students from Latin America and the Caribbean.</p>
+          <div class="hero__ctas">
+            <a href="/admissions#apply" class="btn btn--primary">Apply now →</a>
+            <a href="/admissions#request-info" class="btn btn--secondary">Request information</a>
+            <a href="/programs" class="btn btn--ghost">Explore programs →</a>
+          </div>
+          <p class="hero__fineprint">Rolling admissions · No application fee · Bilingual advisors available in English and Spanish.</p>
+        </div>
+        <aside class="hero__aside" aria-label="University at a glance">
+          <div class="hero__facts">
+            <p class="hero__facts-title">At a glance</p>
+            <dl>
+              <div class="hero__facts-row"><dt>Accreditation</dt><dd>ACCSC</dd></div>
+              <div class="hero__facts-row"><dt>Location</dt><dd>Doral, Miami, FL</dd></div>
+              <div class="hero__facts-row"><dt>Format</dt><dd>On-campus, Hybrid &amp; Online</dd></div>
+              <div class="hero__facts-row"><dt>Languages</dt><dd>English &amp; Spanish</dd></div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- AUTHORITY -->
+    <section class="authority" aria-labelledby="authority-heading">
+      <h2 id="authority-heading" class="sr-only">Accreditation and authorizations</h2>
+      <div class="container authority__grid">
+        <div class="authority__item"><p class="eyebrow">Authority</p><h3>ACCSC accredited</h3><p>Atlantis University is accredited by the Accrediting Commission of Career Schools and Colleges (ACCSC), a national accreditor recognized by the U.S. Department of Education.</p></div>
+        <div class="authority__item"><p class="eyebrow">Authority</p><h3>Licensed in Florida</h3><p>Authorized by the Florida Department of Education, Commission for Independent Education, License No. 3009. All programs comply with Florida postsecondary standards.</p></div>
+        <div class="authority__item"><p class="eyebrow">Authority</p><h3>F-1 visa support</h3><p>SEVP-certified to issue Form I-20 for international students applying for F-1 student visas, with bilingual advising for Latin America and the Caribbean.</p></div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROGRAMS -->
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="container">
+        <header class="featured__head">
+          <div class="featured__intro">
+            <p class="eyebrow">Featured programs</p>
+            <h2 id="featured-heading">Four of our most-applied-to degree programs.</h2>
+            <p>These Miami-based programs are designed for working professionals and international students. Each is taught in English, with online and hybrid options where available, and led by faculty with industry experience.</p>
+          </div>
+          <a href="/programs" class="featured__see-all">See all programs →</a>
+        </header>
+        <div class="featured__grid">
+          <article class="card">
+            <div class="card__accent-bar" style="background: var(--school-business);"></div>
+            <p class="eyebrow card__eyebrow" style="color: var(--school-business);">School of Business</p>
+            <h3 class="card__title">Master of Business Administration (MBA)</h3>
+            <dl class="card__dl">
+              <div><dt>Credential</dt><dd>Master's degree</dd></div>
+              <div><dt>Format</dt><dd>Hybrid · Evening classes</dd></div>
+            </dl>
+            <p class="card__desc">A 36-credit MBA built for working professionals in Miami. Concentrations in international business, finance, and management, taught in English with bilingual faculty.</p>
+            <div><p class="eyebrow" style="margin-bottom: 0.5rem;">Career outcomes</p>
+              <ul class="card__chips"><li class="chip">Operations Manager</li><li class="chip">Financial Analyst</li><li class="chip">Director of International Business</li></ul>
+            </div>
+            <div class="card__cta"><a href="/admissions#apply" class="btn btn--primary btn--sm">Apply now</a><a href="/programs/mba-miami" class="card__link">View MBA program details →</a></div>
+          </article>
+
+          <article class="card">
+            <div class="card__accent-bar" style="background: var(--school-tech);"></div>
+            <p class="eyebrow card__eyebrow" style="color: var(--school-tech);">School of Technology</p>
+            <h3 class="card__title">Artificial Intelligence</h3>
+            <dl class="card__dl"><div><dt>Credential</dt><dd>BS concentration / Certificate</dd></div><div><dt>Format</dt><dd>On-campus &amp; Online</dd></div></dl>
+            <p class="card__desc">Applied AI coursework covering machine learning, generative AI, data engineering, and responsible AI — aligned with Florida's growing tech employer demand.</p>
+            <div><p class="eyebrow" style="margin-bottom: 0.5rem;">Career outcomes</p>
+              <ul class="card__chips"><li class="chip">Machine Learning Engineer</li><li class="chip">AI Product Analyst</li><li class="chip">Data Engineer</li></ul>
+            </div>
+            <div class="card__cta"><a href="/admissions#apply" class="btn btn--primary btn--sm">Apply now</a><a href="/programs/artificial-intelligence-miami" class="card__link">View AI program details →</a></div>
+          </article>
+
+          <article class="card">
+            <div class="card__accent-bar" style="background: var(--school-health);"></div>
+            <p class="eyebrow card__eyebrow" style="color: var(--school-health);">School of Health</p>
+            <h3 class="card__title">Healthcare Management</h3>
+            <dl class="card__dl"><div><dt>Credential</dt><dd>BS in Healthcare Administration</dd></div><div><dt>Format</dt><dd>On-campus &amp; Online</dd></div></dl>
+            <p class="card__desc">Prepares administrators for hospitals, clinics, and health systems serving Miami's diverse patient population. Covers U.S. healthcare policy, operations, and compliance.</p>
+            <div><p class="eyebrow" style="margin-bottom: 0.5rem;">Career outcomes</p>
+              <ul class="card__chips"><li class="chip">Healthcare Administrator</li><li class="chip">Clinical Operations Manager</li><li class="chip">Practice Director</li></ul>
+            </div>
+            <div class="card__cta"><a href="/admissions#apply" class="btn btn--primary btn--sm">Apply now</a><a href="/programs/healthcare-management-miami" class="card__link">View Healthcare Management program details →</a></div>
+          </article>
+
+          <article class="card">
+            <div class="card__accent-bar" style="background: var(--school-edu);"></div>
+            <p class="eyebrow card__eyebrow" style="color: var(--school-edu);">School of Education</p>
+            <h3 class="card__title">Education</h3>
+            <dl class="card__dl"><div><dt>Credential</dt><dd>BA Bilingual Education / MA Instructional Design</dd></div><div><dt>Format</dt><dd>Hybrid</dd></div></dl>
+            <p class="card__desc">Bilingual education and instructional design degrees that prepare K–12 teachers and learning designers for U.S. classrooms and international schools.</p>
+            <div><p class="eyebrow" style="margin-bottom: 0.5rem;">Career outcomes</p>
+              <ul class="card__chips"><li class="chip">K–12 Teacher</li><li class="chip">Curriculum Designer</li><li class="chip">School Administrator</li></ul>
+            </div>
+            <div class="card__cta"><a href="/admissions#apply" class="btn btn--primary btn--sm">Apply now</a><a href="/programs/bilingual-education-miami" class="card__link">View Education program details →</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHOOLS GRID -->
+    <section class="section" aria-labelledby="schools-heading">
+      <div class="container">
+        <header class="schools__head">
+          <p class="eyebrow">Six schools</p>
+          <h2 id="schools-heading">Explore degree programs across six schools.</h2>
+          <p>From business and technology to health, engineering, education, and languages — Atlantis University offers accredited bachelor's, master's, and certificate programs aligned to careers in Miami and across the U.S.</p>
+          <a href="/programs" class="schools__view-all">View all programs →</a>
+        </header>
+        <div class="schools__grid">
+          <a href="/schools/business" class="school-card"><div class="school-card__bar" style="background: var(--school-business);"></div><p class="eyebrow" style="color: var(--school-business); margin-top: 0.5rem;">Business</p><h3 class="school-card__title">School of Business</h3><p class="school-card__desc">Degrees in business administration, finance, marketing, and international trade — designed for the bilingual Miami market and Latin American economies.</p><div class="school-card__foot"><span class="school-card__count">4 programs</span><span class="school-card__cta">Explore →</span></div></a>
+          <a href="/schools/technology" class="school-card"><div class="school-card__bar" style="background: var(--school-tech);"></div><p class="eyebrow" style="color: var(--school-tech); margin-top: 0.5rem;">Technology</p><h3 class="school-card__title">School of Technology</h3><p class="school-card__desc">Software development, cybersecurity, data analytics, and IT management programs aligned with Florida's growing tech corridor.</p><div class="school-card__foot"><span class="school-card__count">5 programs</span><span class="school-card__cta">Explore →</span></div></a>
+          <a href="/schools/health" class="school-card"><div class="school-card__bar" style="background: var(--school-health);"></div><p class="eyebrow" style="color: var(--school-health); margin-top: 0.5rem;">Health</p><h3 class="school-card__title">School of Health</h3><p class="school-card__desc">Healthcare administration, nursing, and allied health degrees that meet U.S. clinical standards and serve Miami's diverse patient population.</p><div class="school-card__foot"><span class="school-card__count">4 programs</span><span class="school-card__cta">Explore →</span></div></a>
+          <a href="/schools/engineering" class="school-card"><div class="school-card__bar" style="background: var(--school-eng);"></div><p class="eyebrow" style="color: var(--school-eng); margin-top: 0.5rem;">Engineering</p><h3 class="school-card__title">School of Engineering</h3><p class="school-card__desc">Applied engineering programs covering industrial systems, electrical engineering, and renewable energy infrastructure.</p><div class="school-card__foot"><span class="school-card__count">3 programs</span><span class="school-card__cta">Explore →</span></div></a>
+          <a href="/schools/education" class="school-card"><div class="school-card__bar" style="background: var(--school-edu);"></div><p class="eyebrow" style="color: var(--school-edu); margin-top: 0.5rem;">Education</p><h3 class="school-card__title">School of Education</h3><p class="school-card__desc">Bilingual education, TESOL, and instructional design programs that prepare educators for U.S. classrooms and international schools.</p><div class="school-card__foot"><span class="school-card__count">3 programs</span><span class="school-card__cta">Explore →</span></div></a>
+          <a href="/schools/languages" class="school-card"><div class="school-card__bar" style="background: var(--school-lang);"></div><p class="eyebrow" style="color: var(--school-lang); margin-top: 0.5rem;">Languages</p><h3 class="school-card__title">School of Languages</h3><p class="school-card__desc">Intensive English (ESL) for international students, plus Spanish, Portuguese, and translation studies.</p><div class="school-card__foot"><span class="school-card__count">3 programs</span><span class="school-card__cta">Explore →</span></div></a>
+        </div>
+        <div class="midcta">
+          <p>Ready to start? Applications are reviewed on a rolling basis.</p>
+          <a href="/admissions#apply" class="btn btn--primary">Apply now</a>
+          <a href="/admissions#request-info" class="btn btn--secondary">Request information</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIENCES -->
+    <section class="section" aria-labelledby="audiences-heading">
+      <div class="container">
+        <div class="audiences__intro"><h2 id="audiences-heading">Who studies at Atlantis University</h2><p>Our students come from across Florida, the United States, Latin America, and the Caribbean. Programs are structured to fit different schedules, work commitments, and visa situations.</p></div>
+        <div class="audiences__grid">
+          <a href="/admissions" class="audience"><h3>U.S. students</h3><p>Florida residents and out-of-state students seeking career-focused degrees in a bilingual, internationally connected city.</p><span class="audience__cta">U.S. admissions steps →</span></a>
+          <a href="/international" class="audience"><h3>International students</h3><p>Students from Latin America and the Caribbean. We are SEVP-authorized to issue Form I-20 for F-1 student visas.</p><span class="audience__cta">F-1 visa &amp; I-20 process →</span></a>
+          <a href="/programs" class="audience"><h3>Working professionals</h3><p>Hybrid and online formats with evening classes — designed to fit around full-time work and family commitments.</p><span class="audience__cta">Hybrid &amp; online programs →</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="finalcta" aria-labelledby="finalcta-heading">
+      <div class="container finalcta__grid">
+        <div class="finalcta__copy"><h2 id="finalcta-heading">Apply to an accredited Miami degree program.</h2><p>Speak with a bilingual admissions advisor about MBA, AI, Healthcare Management, Education, and other on-campus, hybrid, and online programs.</p></div>
+        <div class="finalcta__ctas"><a href="/admissions#apply" class="btn btn--inverse">Apply now</a><a href="/admissions#request-info" class="btn btn--inverse-outline">Request information</a></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading">Frequently asked questions</h2>
+        <div class="faq__list">
+          <div class="faq__item"><p class="faq__q">Is Atlantis University accredited?</p><p class="faq__a">Yes. Atlantis University is accredited by the Accrediting Commission of Career Schools and Colleges (ACCSC) and authorized by the Florida Department of Education, Commission for Independent Education.</p></div>
+          <div class="faq__item"><p class="faq__q">Where is the campus located?</p><p class="faq__a">The main campus is in Doral, in the Miami metropolitan area, at 1442 NW 107th Ave, Doral, FL 33172.</p></div>
+          <div class="faq__item"><p class="faq__q">What languages are courses taught in?</p><p class="faq__a">Most degree programs are taught in English. The Intensive English Program (IEP) and select bilingual offerings support students whose first language is Spanish or Portuguese.</p></div>
+          <div class="faq__item"><p class="faq__q">Does Atlantis University accept international students?</p><p class="faq__a">Yes. The university is authorized to enroll non-immigrant students and issues Form I-20 for F-1 student visa applicants. Dedicated international advisors support students from Latin America and the Caribbean.</p></div>
+          <div class="faq__item"><p class="faq__q">Are programs available online?</p><p class="faq__a">Several degree and certificate programs are available fully online or in a hybrid format. Specific modality is listed on each program page.</p></div>
+          <div class="faq__item"><p class="faq__q">How do I apply?</p><p class="faq__a">Submit the online application, official transcripts, a government-issued ID, and (for international applicants) proof of English proficiency or IEP placement. Detailed steps are on the Admissions page.</p></div>
+          <div class="faq__item"><p class="faq__q">What featured degree programs does Atlantis University offer?</p><p class="faq__a">Featured programs include the Master of Business Administration (MBA), Artificial Intelligence, Healthcare Management (BS in Healthcare Administration), and Education (Bilingual Education and Instructional Design). Full catalog is on the Programs page.</p></div>
+          <div class="faq__item"><p class="faq__q">How much does tuition cost?</p><p class="faq__a">Tuition varies by program and modality. Per-credit tuition, fees, and payment plans are listed on the Admissions page. Atlantis University also offers institutional scholarships and accepts approved federal and private financing.</p></div>
+          <div class="faq__item"><p class="faq__q">How long does it take to complete a degree?</p><p class="faq__a">Bachelor's degrees typically take about 4 years full-time and the MBA takes about 18–24 months. Transfer credits and prior learning assessments can shorten time-to-degree. Certificates can be completed in under 12 months.</p></div>
+          <div class="faq__item"><p class="faq__q">Can I transfer credits from another university?</p><p class="faq__a">Yes. Atlantis University accepts transfer credits from accredited U.S. and international institutions. Submit official transcripts during the application process for an evaluation by the Registrar's Office.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <p class="site-footer__brand">Atlantis University</p>
+          <p class="site-footer__about">An accredited Miami university offering on-campus, hybrid, and online degree programs in business, technology, health, engineering, education, and languages.</p>
+          <address class="site-footer__address">1442 NW 107th Ave, Suite 400<br />Doral, FL 33172, United States<br />+1 (305) 555-1234</address>
+        </div>
+        <div class="site-footer__col"><h4>Schools</h4><ul><li><a href="/schools/business">Business</a></li><li><a href="/schools/technology">Technology</a></li><li><a href="/schools/health">Health</a></li><li><a href="/schools/engineering">Engineering</a></li><li><a href="/schools/education">Education</a></li><li><a href="/schools/languages">Languages</a></li></ul></div>
+        <div class="site-footer__col"><h4>University</h4><ul><li><a href="/admissions">Admissions</a></li><li><a href="/international">International Students</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      </div>
+      <div class="site-footer__bottom"><p>© 2026 Atlantis University. All rights reserved.</p><p>Accredited by ACCSC · Authorized by the Florida Department of Education</p></div>
+    </div>
+  </footer>
+</body>
+</html>

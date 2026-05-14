@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Admissions — Atlantis University Miami</title>
+  <meta name="description" content="How to apply to Atlantis University: 5-step admissions process, requirements, tuition rates, and next steps for U.S. and international students. Rolling admissions with start terms in January, May, and September. No application fee." />
+  <link rel="canonical" href="https://atlantisuniversity.edu/admissions" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Admissions — Atlantis University" />
+  <meta property="og:description" content="Apply to Atlantis University in Miami. Clear 5-step process, requirements, and tuition." />
+
+  <!-- Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://atlantisuniversity.edu/" },
+      { "@type": "ListItem", "position": 2, "name": "Admissions", "item": "https://atlantisuniversity.edu/admissions" }
+    ]
+  }
+  </script>
+
+  <!-- HowTo schema for application steps -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to apply to Atlantis University",
+    "description": "Five-step admissions process to apply to a degree or certificate program at Atlantis University in Miami, Florida.",
+    "totalTime": "P14D",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Submit application", "text": "Complete the online application form. There is no application fee." },
+      { "@type": "HowToStep", "position": 2, "name": "Send transcripts", "text": "Provide official high school transcripts (and college transcripts if applicable)." },
+      { "@type": "HowToStep", "position": 3, "name": "Verify identity", "text": "Submit a government-issued ID. International applicants submit a passport copy." },
+      { "@type": "HowToStep", "position": 4, "name": "English proficiency", "text": "International applicants demonstrate English proficiency or enroll in the Intensive English Program." },
+      { "@type": "HowToStep", "position": 5, "name": "Interview & enrollment", "text": "Meet with an admissions advisor, finalize financial planning, and enroll." }
+    ]
+  }
+  </script>
+
+  <!-- FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is there an application fee?", "acceptedAnswer": { "@type": "Answer", "text": "No. Atlantis University does not charge an application fee." } },
+      { "@type": "Question", "name": "When are the application deadlines?", "acceptedAnswer": { "@type": "Answer", "text": "Applications are accepted on a rolling basis. Programs start in January, May, and September." } },
+      { "@type": "Question", "name": "Is financial aid available?", "acceptedAnswer": { "@type": "Answer", "text": "U.S. citizens and eligible non-citizens may apply for federal financial aid (Title IV). Institutional payment plans are available to all students." } },
+      { "@type": "Question", "name": "Do you accept transfer credits?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Up to 75% of credits may be transferred for undergraduate programs, subject to evaluation by the registrar." } },
+      { "@type": "Question", "name": "What if my English isn't strong enough?", "acceptedAnswer": { "@type": "Answer", "text": "International applicants may enroll directly in the Intensive English Program (IEP) and transition into a degree program upon reaching required proficiency." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/shared.css" />
+
+  <style>
+    .steps {
+      display: grid; gap: 2rem; margin-top: 3rem;
+    }
+    @media (min-width: 640px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .steps { grid-template-columns: repeat(5, 1fr); } }
+    .step { border-top: 1px solid var(--color-border); padding-top: 1.25rem; }
+    .step__num { font-family: var(--font-display); font-size: 1.875rem; font-weight: 500; }
+    .step__title { margin-top: 0.75rem; font-family: var(--font-sans); font-size: var(--fs-body); font-weight: 500; }
+    .step__desc { margin-top: 0.5rem; font-size: var(--fs-small); color: var(--color-muted-foreground); line-height: 1.65; }
+
+    .reqtuition { display: grid; gap: 3rem; }
+    @media (min-width: 768px) { .reqtuition { grid-template-columns: repeat(2, 1fr); gap: 4rem; } }
+    .reqlist { margin-top: 2rem; display: flex; flex-direction: column; }
+    .reqlist li {
+      display: flex; gap: 0.75rem;
+      padding-bottom: 0.875rem; padding-top: 0.875rem;
+      border-bottom: 1px solid var(--color-border);
+      font-size: var(--fs-small);
+    }
+    .reqlist li:first-child { padding-top: 0; }
+    .reqlist .em { color: var(--color-muted-foreground); flex-shrink: 0; }
+
+    .tuition-table {
+      margin-top: 2rem;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .tuition-table li {
+      display: flex; justify-content: space-between; gap: 1.5rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: var(--fs-small);
+    }
+    .tuition-table li:last-child { border-bottom: 0; }
+    .tuition-table .price { font-weight: 500; font-variant-numeric: tabular-nums; }
+    .tuition-note { margin-top: 0.75rem; font-size: var(--fs-small); color: var(--color-muted-foreground); }
+
+    .request-section {
+      background: var(--color-sand); padding: 5rem 0; border-bottom: 1px solid var(--color-border);
+    }
+    .request-grid { display: grid; gap: 2.5rem; }
+    @media (min-width: 768px) { .request-grid { grid-template-columns: repeat(2, 1fr); gap: 4rem; } }
+    .request-form {
+      display: grid; gap: 1rem;
+      background: var(--color-background);
+      border: 1px solid var(--color-border); border-radius: 1rem; padding: 2rem;
+    }
+    .form-field { display: grid; gap: 0.5rem; }
+    .form-field label { font-size: var(--fs-small); font-weight: 500; }
+    .form-field input, .form-field select {
+      font-family: var(--font-sans); font-size: var(--fs-body);
+      padding: 0.75rem 0.875rem;
+      border: 1px solid var(--color-border); border-radius: 0.5rem;
+      background: var(--color-background);
+    }
+    .form-field input:focus, .form-field select:focus {
+      outline: 2px solid var(--color-foreground); outline-offset: -1px; border-color: var(--color-foreground);
+    }
+    .form-disclaimer { font-size: 0.75rem; color: var(--color-muted-foreground); }
+  </style>
+</head>
+
+<body>
+  <!-- SITE HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a href="/" class="site-header__brand" aria-label="Atlantis University home">Atlantis<span>University</span></a>
+      <nav class="site-header__nav" aria-label="Primary">
+        <a href="/programs">Programs</a>
+        <a href="/admissions" aria-current="page">Admissions</a>
+        <a href="/international">International</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <a href="/admissions#request-info" class="site-header__request">Request info</a>
+        <a href="/admissions#apply" class="site-header__apply">Apply now</a>
+        <button type="button" class="site-header__search" aria-label="Open search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero" aria-labelledby="adm-title">
+      <div class="container">
+        <p class="eyebrow page-hero__eyebrow">Admissions</p>
+        <h1 id="adm-title" class="page-hero__title">How to apply.</h1>
+        <p class="page-hero__lead">A clear, five-step process. Applications are accepted on a rolling basis with start terms in January, May, and September.</p>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section id="apply" class="section" aria-labelledby="steps-heading" style="scroll-margin-top: 5rem;">
+      <div class="container">
+        <h2 id="steps-heading">Application steps</h2>
+        <ol class="steps">
+          <li class="step"><div class="step__num">01</div><div class="step__title">Submit application</div><p class="step__desc">Complete the online application form. There is no application fee.</p></li>
+          <li class="step"><div class="step__num">02</div><div class="step__title">Send transcripts</div><p class="step__desc">Provide official high school transcripts (and college transcripts if applicable).</p></li>
+          <li class="step"><div class="step__num">03</div><div class="step__title">Verify identity</div><p class="step__desc">Submit a government-issued ID. International applicants submit a passport copy.</p></li>
+          <li class="step"><div class="step__num">04</div><div class="step__title">English proficiency</div><p class="step__desc">International applicants demonstrate English proficiency or enroll in the Intensive English Program.</p></li>
+          <li class="step"><div class="step__num">05</div><div class="step__title">Interview &amp; enrollment</div><p class="step__desc">Meet with an admissions advisor, finalize financial planning, and enroll.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- REQUIREMENTS + TUITION -->
+    <section class="section" aria-label="Requirements and tuition">
+      <div class="container reqtuition">
+        <div>
+          <h2>Requirements</h2>
+          <ul class="reqlist">
+            <li><span class="em">—</span><span>Completed online application</span></li>
+            <li><span class="em">—</span><span>Official high school diploma or equivalent (GED, foreign secondary credential)</span></li>
+            <li><span class="em">—</span><span>Government-issued photo ID (passport for international applicants)</span></li>
+            <li><span class="em">—</span><span>English proficiency: TOEFL 61+ / IELTS 5.5+ / Duolingo 90+ — or IEP placement</span></li>
+            <li><span class="em">—</span><span>Personal statement (one page)</span></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Tuition</h2>
+          <p class="tuition-note">Reference rates for the 2025–2026 academic year. Final cost depends on program and credits enrolled.</p>
+          <ul class="tuition-table">
+            <li><span>Undergraduate degree (per credit)</span><span class="price">$385</span></li>
+            <li><span>Graduate degree (per credit)</span><span class="price">$565</span></li>
+            <li><span>Intensive English Program (per term)</span><span class="price">$2,400</span></li>
+            <li><span>Certificate programs (per credit)</span><span class="price">$320</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- REQUEST INFO + FORM -->
+    <section id="request-info" class="request-section" aria-labelledby="reqinfo-heading" style="scroll-margin-top: 5rem;">
+      <div class="container request-grid">
+        <div>
+          <h2 id="reqinfo-heading">Request information</h2>
+          <p style="margin-top: 1rem; color: var(--color-muted-foreground); line-height: 1.65;">Tell us a little about you and an admissions advisor will follow up within one business day with program details, tuition, and next steps.</p>
+        </div>
+        <form class="request-form" novalidate>
+          <div class="form-field">
+            <label for="rf-name">Full name</label>
+            <input id="rf-name" name="name" type="text" placeholder="Maria Rodríguez" autocomplete="name" />
+          </div>
+          <div class="form-field">
+            <label for="rf-email">Email</label>
+            <input id="rf-email" name="email" type="email" placeholder="you@email.com" autocomplete="email" />
+          </div>
+          <div class="form-field">
+            <label for="rf-program">Program of interest</label>
+            <select id="rf-program" name="program">
+              <option>Business</option>
+              <option>Technology</option>
+              <option>Health</option>
+              <option>Engineering</option>
+              <option>Education</option>
+              <option>Languages</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn--primary" style="justify-content: center;">Send request</button>
+          <p class="form-disclaimer">By submitting, you agree to be contacted by Atlantis University.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" aria-labelledby="adm-faq-heading">
+      <div class="container">
+        <h2 id="adm-faq-heading">Frequently asked questions</h2>
+        <div class="faq__list">
+          <div class="faq__item"><p class="faq__q">Is there an application fee?</p><p class="faq__a">No. Atlantis University does not charge an application fee.</p></div>
+          <div class="faq__item"><p class="faq__q">When are the application deadlines?</p><p class="faq__a">Applications are accepted on a rolling basis. Programs start in January, May, and September.</p></div>
+          <div class="faq__item"><p class="faq__q">Is financial aid available?</p><p class="faq__a">U.S. citizens and eligible non-citizens may apply for federal financial aid (Title IV). Institutional payment plans are available to all students.</p></div>
+          <div class="faq__item"><p class="faq__q">Do you accept transfer credits?</p><p class="faq__a">Yes. Up to 75% of credits may be transferred for undergraduate programs, subject to evaluation by the registrar.</p></div>
+          <div class="faq__item"><p class="faq__q">What if my English isn't strong enough?</p><p class="faq__a">International applicants may enroll directly in the Intensive English Program (IEP) and transition into a degree program upon reaching required proficiency.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--no-border" style="padding: 4rem 0;">
+      <div class="container">
+        <a href="/international" class="card__link" style="font-weight: 500;">International student? See visa &amp; I-20 information →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div><p class="site-footer__brand">Atlantis University</p><p class="site-footer__about">An accredited Miami university offering on-campus, hybrid, and online degree programs in business, technology, health, engineering, education, and languages.</p><address class="site-footer__address">1442 NW 107th Ave, Suite 400<br />Doral, FL 33172, United States<br />+1 (305) 555-1234</address></div>
+        <div class="site-footer__col"><h4>Schools</h4><ul><li><a href="/schools/business">Business</a></li><li><a href="/schools/technology">Technology</a></li><li><a href="/schools/health">Health</a></li><li><a href="/schools/engineering">Engineering</a></li><li><a href="/schools/education">Education</a></li><li><a href="/schools/languages">Languages</a></li></ul></div>
+        <div class="site-footer__col"><h4>University</h4><ul><li><a href="/admissions">Admissions</a></li><li><a href="/international">International Students</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      </div>
+      <div class="site-footer__bottom"><p>© 2026 Atlantis University. All rights reserved.</p><p>Accredited by ACCSC · Authorized by the Florida Department of Education</p></div>
+    </div>
+  </footer>
+</body>
+</html>

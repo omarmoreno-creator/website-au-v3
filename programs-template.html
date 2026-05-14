@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+  ==========================================================================
+  PROGRAM PAGE TEMPLATE
+  ==========================================================================
+  This is the generic template used by the Webflow CMS for the Programs
+  collection. The MBA page (programs-mba-miami.html) is the reference
+  implementation. Use this template's placeholders to bind CMS fields:
+
+    {{program.name}}              → CMS field: name
+    {{program.short_name}}        → CMS field: short-name (e.g. "MBA")
+    {{program.slug}}              → CMS field: slug
+    {{program.school_name}}       → CMS field: school > name
+    {{program.school_slug}}       → CMS field: school > slug
+    {{program.school_color_var}}  → CMS field: accent-color-var (e.g. "--school-business")
+    {{program.credential}}        → CMS field: credential
+    {{program.credits}}           → CMS field: credits
+    {{program.duration}}          → CMS field: duration
+    {{program.format}}            → CMS field: format
+    {{program.location}}          → CMS field: location (default: "Doral, Miami, Florida")
+    {{program.language}}          → CMS field: language
+    {{program.start_dates}}       → CMS field: start-dates
+    {{program.lead_paragraph}}    → CMS field: lead-paragraph
+    {{program.overview_text}}     → CMS field: overview (rich text, multiple paragraphs)
+    {{program.highlights}}        → CMS multi-reference: highlights[] (label + desc)
+    {{program.why_points}}        → CMS multi-reference: why-points[] (title + desc)
+    {{program.outcomes}}          → CMS multi-reference: outcomes[] (role + context)
+    {{program.curriculum_blocks}} → CMS multi-reference: curriculum[] (title + desc + courses[])
+    {{program.faqs}}              → CMS multi-reference: faqs[] (q + a)
+    {{program.related_programs}}  → CMS multi-reference: related[] (4 cards)
+    {{program.meta_title}}        → CMS field: meta-title
+    {{program.meta_description}}  → CMS field: meta-description
+
+  All visual structure mirrors programs-mba-miami.html. The accent color is
+  applied via the CMS field `school_color_var` to all colored elements
+  (program-hero__bar, school-link, eyebrows, role-card__label, etc.).
+  ==========================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{{program.meta_title}} | Atlantis University</title>
+  <meta name="description" content="{{program.meta_description}}" />
+  <link rel="canonical" href="https://atlantisuniversity.edu/programs/{{program.slug}}" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{program.name}} — Atlantis University" />
+  <meta property="og:description" content="{{program.meta_description}}" />
+
+  <!-- Program JSON-LD (CMS-bound) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOccupationalProgram",
+    "name": "{{program.name}}",
+    "description": "{{program.meta_description}}",
+    "educationalCredentialAwarded": "{{program.credential}}",
+    "educationalProgramMode": ["{{program.format}}"],
+    "numberOfCredits": "{{program.credits}}",
+    "inLanguage": ["en", "es"],
+    "occupationalCategory": "{{program.outcomes_list_csv}}",
+    "provider": { "@id": "https://atlantisuniversity.edu/#organization" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://atlantisuniversity.edu/" },
+      { "@type": "ListItem", "position": 2, "name": "Programs", "item": "https://atlantisuniversity.edu/programs" },
+      { "@type": "ListItem", "position": 3, "name": "{{program.short_name}}", "item": "https://atlantisuniversity.edu/programs/{{program.slug}}" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ JSON-LD generated from CMS faqs collection -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      <!-- Repeat for each {{program.faqs[]}}:
+        { "@type": "Question", "name": "{{faq.question}}", "acceptedAnswer": { "@type": "Answer", "text": "{{faq.answer}}" } }
+      -->
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/shared.css" />
+
+  <!--
+    PROGRAM-SPECIFIC STYLES — copy from programs-mba-miami.html.
+    The Webflow MCP should turn the inline <style> block on the MBA page
+    into a Webflow Component class set, so this template can simply
+    reuse the same component classes. Only override the accent color
+    by setting --accent: var({{program.school_color_var}}) on the body.
+  -->
+  <style>
+    body { --accent: var({{program.school_color_var}}); }
+    /* See programs-mba-miami.html for the full style block. The selectors
+       below should reference --accent instead of --school-business. */
+  </style>
+</head>
+
+<body>
+  <!--
+    BODY STRUCTURE — Identical to programs-mba-miami.html.
+    Replace literal MBA copy with CMS field bindings. Section list:
+
+    1. <header class="site-header"> — Webflow Component "Site Header"
+    2. <section class="program-hero"> — bind to {{program.*}}
+       - Breadcrumb with {{program.short_name}}
+       - .program-hero__bar with --accent
+       - <a class="program-hero__school-link"> linking to /schools/{{program.school_slug}}
+       - <h1>{{program.name}}</h1>
+       - .program-hero__lead → {{program.lead_paragraph}}
+       - .highlights → loop over {{program.highlights[]}}
+       - CTAs to /admissions#apply and /admissions#request-info
+       - Aside .factcard with all the {{program.*}} facts
+    3. <section class="section"> Overview
+       - eyebrow {{program.school_name}}
+       - <h2>Why choose {{program.short_name}} in Miami?</h2>  (or template)
+       - {{program.lead_paragraph}}
+       - second twocol → <h2>Program overview</h2> + {{program.overview_text}}
+       - <dl class="keydetails"> with {{program.*}}
+    4. <section class="section"> Why Atlantis
+       - eyebrow + h2
+       - .why-grid → loop over {{program.why_points[]}}
+    5. <section class="mid-cta"> — CTA banner
+    6. <section class="section"> Career Outcomes
+       - .roles-grid → loop over {{program.outcomes[]}}
+    7. <section class="section section--sand"> Curriculum
+       - twocol with .curr-block × N → loop over {{program.curriculum_blocks[]}}
+         each with .courselist → loop over {{block.courses[]}}
+    8. <section class="section"> Why Miami (optional, default 4 cards)
+    9. <section class="section section--sand"> International support
+       - bilingual .intl-list (default copy)
+    10. <section class="section"> Tuition (default copy + per-credit rate)
+    11. <section class="faq"> — loop over {{program.faqs[]}}
+    12. <section class="section"> Comparison advantages (default 5)
+    13. <section class="section section--sand"> Related programs
+        - .related-grid → loop over {{program.related_programs[]}} (max 4)
+    14. <section class="finalcta finalcta--centered">
+        - <h2>Start your {{program.short_name}} in Miami today</h2>
+    15. <footer class="site-footer"> — Webflow Component "Site Footer"
+
+    The full literal HTML for sections 1-15 lives in programs-mba-miami.html.
+    Use that file as the reference and replace strings with bindings.
+  -->
+
+  <p style="padding: 4rem; text-align: center; color: #888;">
+    <em>This template inherits structure from <code>programs-mba-miami.html</code>.<br>
+    The Webflow MCP should clone that page's components and bind them to CMS
+    Programs collection fields as documented above.</em>
+  </p>
+
+</body>
+</html>

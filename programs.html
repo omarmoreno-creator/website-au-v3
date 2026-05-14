@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Degree Programs in Miami — Bachelor's, Master's &amp; Certificates | Atlantis University</title>
+  <meta name="description" content="Browse all ACCSC-accredited degree and certificate programs at Atlantis University in Miami, Florida. Filter by school, degree level, and format (on-campus, hybrid, online). F-1 visa support for international students." />
+  <link rel="canonical" href="https://atlantisuniversity.edu/programs" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Atlantis University — Degree Programs in Miami, Florida" />
+  <meta property="og:description" content="Bachelor's, master's, and professional certificates across business, technology, health, engineering, education, and languages — on-campus in Doral, hybrid, and online." />
+
+  <!-- ItemList JSON-LD: lists all programs as a structured collection -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Degree programs at Atlantis University",
+    "description": "All bachelor's, master's, and certificate programs offered by Atlantis University in Miami, Florida.",
+    "numberOfItems": 21,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "url": "https://atlantisuniversity.edu/programs/bba-business-administration-miami", "name": "Bachelor of Business Administration" },
+      { "@type": "ListItem", "position": 2, "url": "https://atlantisuniversity.edu/programs/mba-miami", "name": "Master of Business Administration (MBA)" },
+      { "@type": "ListItem", "position": 3, "url": "https://atlantisuniversity.edu/programs/international-business-miami", "name": "International Business" },
+      { "@type": "ListItem", "position": 4, "url": "https://atlantisuniversity.edu/programs/accounting-miami", "name": "Accounting" },
+      { "@type": "ListItem", "position": 5, "url": "https://atlantisuniversity.edu/programs/information-technology-miami", "name": "Information Technology" },
+      { "@type": "ListItem", "position": 6, "url": "https://atlantisuniversity.edu/programs/cybersecurity-miami", "name": "Cybersecurity" },
+      { "@type": "ListItem", "position": 7, "url": "https://atlantisuniversity.edu/programs/software-engineering-miami", "name": "Software Engineering" },
+      { "@type": "ListItem", "position": 8, "url": "https://atlantisuniversity.edu/programs/artificial-intelligence-miami", "name": "Artificial Intelligence" },
+      { "@type": "ListItem", "position": 9, "url": "https://atlantisuniversity.edu/programs/data-analytics-certificate-miami", "name": "Data Analytics" },
+      { "@type": "ListItem", "position": 10, "url": "https://atlantisuniversity.edu/programs/healthcare-management-miami", "name": "Healthcare Management" },
+      { "@type": "ListItem", "position": 11, "url": "https://atlantisuniversity.edu/programs/nursing-bsn-miami", "name": "Nursing (BSN)" },
+      { "@type": "ListItem", "position": 12, "url": "https://atlantisuniversity.edu/programs/medical-assistant-diploma-miami", "name": "Medical Assistant" },
+      { "@type": "ListItem", "position": 13, "url": "https://atlantisuniversity.edu/programs/public-health-miami", "name": "Public Health" },
+      { "@type": "ListItem", "position": 14, "url": "https://atlantisuniversity.edu/programs/industrial-engineering-miami", "name": "Industrial Engineering" },
+      { "@type": "ListItem", "position": 15, "url": "https://atlantisuniversity.edu/programs/electrical-engineering-miami", "name": "Electrical Engineering" },
+      { "@type": "ListItem", "position": 16, "url": "https://atlantisuniversity.edu/programs/renewable-energy-certificate-miami", "name": "Renewable Energy Systems" },
+      { "@type": "ListItem", "position": 17, "url": "https://atlantisuniversity.edu/programs/bilingual-education-miami", "name": "Bilingual Education" },
+      { "@type": "ListItem", "position": 18, "url": "https://atlantisuniversity.edu/programs/tesol-certificate-online", "name": "TESOL Certificate" },
+      { "@type": "ListItem", "position": 19, "url": "https://atlantisuniversity.edu/programs/instructional-design-ma-miami", "name": "Instructional Design" },
+      { "@type": "ListItem", "position": 20, "url": "https://atlantisuniversity.edu/programs/intensive-english-program-miami", "name": "Intensive English Program (IEP)" },
+      { "@type": "ListItem", "position": 21, "url": "https://atlantisuniversity.edu/programs/business-english-certificate-miami", "name": "Business English" }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://atlantisuniversity.edu/" },
+      { "@type": "ListItem", "position": 2, "name": "Programs", "item": "https://atlantisuniversity.edu/programs" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/shared.css" />
+
+  <style>
+    /* Programs-specific */
+    .filterbar {
+      position: sticky; top: 4rem; z-index: 30;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.25rem 0;
+    }
+    .filterbar__row {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem;
+    }
+    .filter-group { display: flex; align-items: center; gap: 0.5rem; }
+    .filter-group__label {
+      font-size: var(--fs-eyebrow); font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.18em;
+      color: var(--color-muted-foreground);
+    }
+    .filter-group select {
+      font-family: var(--font-sans); font-size: var(--fs-small); font-weight: 500;
+      padding: 0.4rem 0.75rem; border: 1px solid var(--color-border);
+      border-radius: var(--radius-pill); background: var(--color-background);
+      cursor: pointer;
+    }
+    .filterbar__count { margin-left: auto; font-size: var(--fs-small); color: var(--color-muted-foreground); }
+    .filterbar__clear {
+      font-size: var(--fs-small); font-weight: 500;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid var(--color-border); border-radius: var(--radius-pill);
+      background: transparent; cursor: pointer;
+    }
+    .filterbar__clear:hover { background: var(--color-sand); }
+
+    .program-grid {
+      display: grid; gap: 1.25rem;
+      padding: 4rem 0;
+    }
+    @media (min-width: 768px) { .program-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .program-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .pcard {
+      position: relative;
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      padding: 1.75rem;
+      display: flex; flex-direction: column;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      text-decoration: none; color: inherit;
+    }
+    .pcard:hover { transform: translateY(-2px); box-shadow: 0 12px 40px -12px rgba(0,0,0,0.1); }
+    .pcard__bar { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+    .pcard__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem; margin-top: 0.5rem; }
+    .pcard__school { font-size: var(--fs-eyebrow); font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; }
+    .pcard__level {
+      font-size: 0.6875rem; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.12em; padding: 0.2rem 0.6rem;
+      border: 1px solid var(--color-border); border-radius: var(--radius-pill);
+      color: var(--color-muted-foreground);
+    }
+    .pcard__title { margin-top: 1rem; font-size: 1.25rem; line-height: 1.25; }
+    .pcard__credential { margin-top: 0.5rem; font-size: var(--fs-small); color: var(--color-muted-foreground); }
+    .pcard__desc { margin-top: 1rem; font-size: var(--fs-small); color: var(--color-muted-foreground); line-height: 1.65; }
+    .pcard__meta { margin-top: 1.25rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; font-size: 0.75rem; }
+    .pcard__meta dt { color: var(--color-muted-foreground); }
+    .pcard__meta dd { font-weight: 500; margin-top: 0.125rem; }
+    .pcard__cta { margin-top: 1.5rem; font-size: var(--fs-small); font-weight: 500; }
+    .pcard:hover .pcard__cta { text-decoration: underline; text-underline-offset: 4px; }
+  </style>
+</head>
+
+<body>
+  <!-- SITE HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a href="/" class="site-header__brand" aria-label="Atlantis University home">Atlantis<span>University</span></a>
+      <nav class="site-header__nav" aria-label="Primary">
+        <a href="/programs" aria-current="page">Programs</a>
+        <a href="/admissions">Admissions</a>
+        <a href="/international">International</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <a href="/admissions#request-info" class="site-header__request">Request info</a>
+        <a href="/admissions#apply" class="site-header__apply">Apply now</a>
+        <button type="button" class="site-header__search" aria-label="Open search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero" aria-labelledby="programs-title">
+      <div class="container">
+        <p class="eyebrow page-hero__eyebrow">Academics</p>
+        <h1 id="programs-title" class="page-hero__title">Degree programs in Miami, Florida.</h1>
+        <p class="page-hero__lead">Atlantis University offers ACCSC-accredited bachelor's degrees, master's degrees, and professional certificates across six schools — business, technology, health, engineering, education, and languages. Programs are delivered on our Doral campus in Miami, in hybrid format, and fully online.</p>
+        <p class="page-hero__lead" style="margin-top: 1rem;">Use the filters below to narrow programs by school, degree level (BS, MBA, Certificate, Diploma), and format (on-campus, hybrid, online). Each program page includes credentials, duration, career outcomes, tuition information, and answers to common questions from U.S. and international students.</p>
+        <div class="page-hero__ctas">
+          <a href="/admissions#apply" class="btn btn--primary">Apply now →</a>
+          <a href="/admissions#request-info" class="btn btn--secondary">Request information</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <section class="filterbar" aria-label="Filter programs">
+      <div class="container filterbar__row">
+        <div class="filter-group">
+          <label for="filter-school" class="filter-group__label">School</label>
+          <select id="filter-school" name="school">
+            <option value="">All</option>
+            <option value="business">Business</option>
+            <option value="technology">Technology</option>
+            <option value="health">Health</option>
+            <option value="engineering">Engineering</option>
+            <option value="education">Education</option>
+            <option value="languages">Languages</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-level" class="filter-group__label">Degree level</label>
+          <select id="filter-level" name="level">
+            <option value="">All</option>
+            <option>Certificate</option><option>Diploma</option><option>Associate</option>
+            <option>Bachelor's</option><option>Master's</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-format" class="filter-group__label">Format</label>
+          <select id="filter-format" name="format">
+            <option value="">All</option>
+            <option>On-campus</option><option>Hybrid</option><option>Online</option>
+          </select>
+        </div>
+        <span class="filterbar__count">21 of 21 programs</span>
+        <button type="button" class="filterbar__clear">Clear filters</button>
+      </div>
+    </section>
+
+    <!-- PROGRAM GRID -->
+    <section aria-labelledby="program-list">
+      <div class="container">
+        <h2 id="program-list" class="sr-only">All programs</h2>
+        <div class="program-grid">
+
+          <!-- BUSINESS -->
+          <a href="/programs/bba-business-administration-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-business);">Business</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">Bachelor of Business Administration</h3>
+            <p class="pcard__credential">Bachelor of Business Administration (BBA)</p>
+            <p class="pcard__desc">A 120-credit BBA in Miami covering management, finance, marketing, and international business — designed for the bilingual South Florida economy.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus &amp; Online</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View BBA program details →</span>
+          </a>
+
+          <a href="/programs/mba-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-business);">Business</span><span class="pcard__level">Master's</span></div>
+            <h3 class="pcard__title">Master of Business Administration (MBA)</h3>
+            <p class="pcard__credential">Master of Business Administration (MBA) · 36 credits</p>
+            <p class="pcard__desc">36-credit hybrid MBA in Miami built for working professionals. Evening classes in Doral combined with online coursework.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>Hybrid · Evening</dd></div><div><dt>Duration</dt><dd>18–24 months</dd></div></dl>
+            <span class="pcard__cta">View MBA program details →</span>
+          </a>
+
+          <a href="/programs/international-business-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-business);">Business</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">International Business</h3>
+            <p class="pcard__credential">BBA Concentration in International Business</p>
+            <p class="pcard__desc">Cross-border trade, Latin American markets, global supply chains, and international finance — taught in Miami, the U.S. gateway to LATAM.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View International Business details →</span>
+          </a>
+
+          <a href="/programs/accounting-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-business);">Business</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">Accounting</h3>
+            <p class="pcard__credential">BBA Concentration in Accounting</p>
+            <p class="pcard__desc">Financial reporting, auditing, taxation, and managerial accounting with U.S. GAAP foundations and international standards exposure.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View Accounting details →</span>
+          </a>
+
+          <!-- TECHNOLOGY -->
+          <a href="/programs/information-technology-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-tech);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-tech);">Technology</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">Information Technology</h3>
+            <p class="pcard__credential">Bachelor of Science in Information Technology</p>
+            <p class="pcard__desc">Systems administration, networking, cloud infrastructure, and IT project management aligned with employer demand in Florida's tech corridor.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus &amp; Online</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View IT program details →</span>
+          </a>
+
+          <a href="/programs/cybersecurity-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-tech);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-tech);">Technology</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">Cybersecurity</h3>
+            <p class="pcard__credential">Bachelor of Science in Cybersecurity</p>
+            <p class="pcard__desc">Network defense, ethical hacking, incident response, and compliance frameworks (NIST, ISO 27001, HIPAA, PCI-DSS).</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>Hybrid</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View Cybersecurity details →</span>
+          </a>
+
+          <a href="/programs/software-engineering-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-tech);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-tech);">Technology</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">Software Engineering</h3>
+            <p class="pcard__credential">Bachelor of Science in Software Engineering</p>
+            <p class="pcard__desc">Full-stack web development, databases, APIs, cloud deployment, and modern engineering practices with a Miami-based capstone project.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View Software Engineering details →</span>
+          </a>
+
+          <a href="/programs/artificial-intelligence-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-tech);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-tech);">Technology</span><span class="pcard__level">Certificate</span></div>
+            <h3 class="pcard__title">Artificial Intelligence</h3>
+            <p class="pcard__credential">BS Concentration &amp; Professional Certificate in AI</p>
+            <p class="pcard__desc">Applied AI: machine learning, generative AI, MLOps, and responsible AI. Available as a BS concentration and as a stand-alone certificate.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus &amp; Online</dd></div><div><dt>Duration</dt><dd>12 mo – 4 yrs</dd></div></dl>
+            <span class="pcard__cta">View AI program details →</span>
+          </a>
+
+          <a href="/programs/data-analytics-certificate-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-tech);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-tech);">Technology</span><span class="pcard__level">Certificate</span></div>
+            <h3 class="pcard__title">Data Analytics</h3>
+            <p class="pcard__credential">Professional Certificate in Data Analytics</p>
+            <p class="pcard__desc">Online certificate covering SQL, Python, data visualization, and BI dashboards — for professionals upskilling into data roles.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>Online</dd></div><div><dt>Duration</dt><dd>9–12 months</dd></div></dl>
+            <span class="pcard__cta">View Data Analytics details →</span>
+          </a>
+
+          <!-- HEALTH -->
+          <a href="/programs/healthcare-management-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-health);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-health);">Health</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">Healthcare Management</h3>
+            <p class="pcard__credential">Bachelor of Science in Healthcare Administration</p>
+            <p class="pcard__desc">Prepares managers for hospitals, outpatient clinics, and health insurance organizations. U.S. healthcare policy, HIPAA, billing, and bilingual patient services.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus &amp; Online</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View Healthcare Management details →</span>
+          </a>
+
+          <a href="/programs/nursing-bsn-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-health);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-health);">Health</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">Nursing (BSN)</h3>
+            <p class="pcard__credential">Bachelor of Science in Nursing (BSN)</p>
+            <p class="pcard__desc">BSN preparing students for Registered Nurse (RN) licensure in Florida. Classroom, simulation labs, and clinical rotations in Miami-area hospitals.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View BSN details →</span>
+          </a>
+
+          <a href="/programs/medical-assistant-diploma-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-health);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-health);">Health</span><span class="pcard__level">Diploma</span></div>
+            <h3 class="pcard__title">Medical Assistant</h3>
+            <p class="pcard__credential">Medical Assistant Diploma</p>
+            <p class="pcard__desc">Diploma program training students for entry-level Medical Assistant roles in Miami clinics and physician offices. Includes a supervised externship.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus</dd></div><div><dt>Duration</dt><dd>9–12 months</dd></div></dl>
+            <span class="pcard__cta">View Medical Assistant details →</span>
+          </a>
+
+          <a href="/programs/public-health-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-health);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-health);">Health</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">Public Health</h3>
+            <p class="pcard__credential">Bachelor of Science in Public Health</p>
+            <p class="pcard__desc">Epidemiology, biostatistics, health policy, and community health — focused on Miami's diverse multilingual population.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>Hybrid</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View Public Health details →</span>
+          </a>
+
+          <!-- ENGINEERING -->
+          <a href="/programs/industrial-engineering-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-eng);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-eng);">Engineering</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">Industrial Engineering</h3>
+            <p class="pcard__credential">Bachelor of Science in Industrial Engineering</p>
+            <p class="pcard__desc">Optimizing production systems, logistics, and operations — directly relevant to Miami's logistics, manufacturing, and trade sectors.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View Industrial Engineering details →</span>
+          </a>
+
+          <a href="/programs/electrical-engineering-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-eng);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-eng);">Engineering</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">Electrical Engineering</h3>
+            <p class="pcard__credential">Bachelor of Science in Electrical Engineering</p>
+            <p class="pcard__desc">Circuits, electronics, power systems, and embedded systems — with applications to renewable energy and smart infrastructure.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View Electrical Engineering details →</span>
+          </a>
+
+          <a href="/programs/renewable-energy-certificate-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-eng);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-eng);">Engineering</span><span class="pcard__level">Certificate</span></div>
+            <h3 class="pcard__title">Renewable Energy Systems</h3>
+            <p class="pcard__credential">Professional Certificate in Renewable Energy Systems</p>
+            <p class="pcard__desc">Solar PV, energy storage, and grid integration — for engineers, technicians, and facility managers entering the clean energy economy.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>Hybrid</dd></div><div><dt>Duration</dt><dd>~9 months</dd></div></dl>
+            <span class="pcard__cta">View Renewable Energy details →</span>
+          </a>
+
+          <!-- EDUCATION -->
+          <a href="/programs/bilingual-education-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-edu);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-edu);">Education</span><span class="pcard__level">Bachelor's</span></div>
+            <h3 class="pcard__title">Bilingual Education</h3>
+            <p class="pcard__credential">Bachelor of Arts in Bilingual Education</p>
+            <p class="pcard__desc">BA preparing K–12 educators for bilingual (English/Spanish) classrooms in Florida and beyond. Includes field experience in Miami-Dade schools.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus</dd></div><div><dt>Duration</dt><dd>~4 years</dd></div></dl>
+            <span class="pcard__cta">View Bilingual Education details →</span>
+          </a>
+
+          <a href="/programs/tesol-certificate-online" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-edu);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-edu);">Education</span><span class="pcard__level">Certificate</span></div>
+            <h3 class="pcard__title">TESOL Certificate</h3>
+            <p class="pcard__credential">TESOL Certificate</p>
+            <p class="pcard__desc">Online TESOL certificate preparing graduates to teach English to adult and K–12 learners in the U.S. and abroad.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>Online</dd></div><div><dt>Duration</dt><dd>~12 months</dd></div></dl>
+            <span class="pcard__cta">View TESOL details →</span>
+          </a>
+
+          <a href="/programs/instructional-design-ma-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-edu);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-edu);">Education</span><span class="pcard__level">Master's</span></div>
+            <h3 class="pcard__title">Instructional Design</h3>
+            <p class="pcard__credential">Master of Arts in Instructional Design</p>
+            <p class="pcard__desc">MA preparing instructional and learning experience (LX) designers for universities, corporate L&amp;D teams, and edtech companies.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>Hybrid</dd></div><div><dt>Duration</dt><dd>~2 years</dd></div></dl>
+            <span class="pcard__cta">View Instructional Design details →</span>
+          </a>
+
+          <!-- LANGUAGES -->
+          <a href="/programs/intensive-english-program-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-lang);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-lang);">Languages</span><span class="pcard__level">Certificate</span></div>
+            <h3 class="pcard__title">Intensive English Program (IEP)</h3>
+            <p class="pcard__credential">Intensive English Program Certificate</p>
+            <p class="pcard__desc">On-campus IEP for international students preparing for U.S. degree study. Six proficiency levels with academic English and TOEFL prep.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>On-campus</dd></div><div><dt>Duration</dt><dd>8-week sessions</dd></div></dl>
+            <span class="pcard__cta">View IEP details →</span>
+          </a>
+
+          <a href="/programs/business-english-certificate-miami" class="pcard">
+            <div class="pcard__bar" style="background: var(--school-lang);"></div>
+            <div class="pcard__head"><span class="pcard__school" style="color: var(--school-lang);">Languages</span><span class="pcard__level">Certificate</span></div>
+            <h3 class="pcard__title">Business English</h3>
+            <p class="pcard__credential">Business English Certificate</p>
+            <p class="pcard__desc">Hybrid Business English certificate for international professionals working in U.S. and multinational companies.</p>
+            <dl class="pcard__meta"><div><dt>Format</dt><dd>Hybrid</dd></div><div><dt>Duration</dt><dd>3–6 months</dd></div></dl>
+            <span class="pcard__cta">View Business English details →</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="finalcta finalcta--centered" aria-labelledby="programs-cta">
+      <div class="container finalcta__grid">
+        <div class="finalcta__copy"><h2 id="programs-cta">Not sure which program is right for you?</h2><p>Speak with a bilingual admissions advisor in English or Spanish. We'll review your background, discuss transfer credits, and recommend the best path.</p></div>
+        <div class="finalcta__ctas"><a href="/admissions#request-info" class="btn btn--inverse">Request information</a><a href="/admissions#apply" class="btn btn--inverse-outline">Apply now →</a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div><p class="site-footer__brand">Atlantis University</p><p class="site-footer__about">An accredited Miami university offering on-campus, hybrid, and online degree programs in business, technology, health, engineering, education, and languages.</p><address class="site-footer__address">1442 NW 107th Ave, Suite 400<br />Doral, FL 33172, United States<br />+1 (305) 555-1234</address></div>
+        <div class="site-footer__col"><h4>Schools</h4><ul><li><a href="/schools/business">Business</a></li><li><a href="/schools/technology">Technology</a></li><li><a href="/schools/health">Health</a></li><li><a href="/schools/engineering">Engineering</a></li><li><a href="/schools/education">Education</a></li><li><a href="/schools/languages">Languages</a></li></ul></div>
+        <div class="site-footer__col"><h4>University</h4><ul><li><a href="/admissions">Admissions</a></li><li><a href="/international">International Students</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      </div>
+      <div class="site-footer__bottom"><p>© 2026 Atlantis University. All rights reserved.</p><p>Accredited by ACCSC · Authorized by the Florida Department of Education</p></div>
+    </div>
+  </footer>
+</body>
+</html>

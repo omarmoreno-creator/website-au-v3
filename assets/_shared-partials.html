@@ -1,0 +1,148 @@
+<!--
+  Atlantis University — Shared HTML Partials
+  ===========================================
+  These snippets are embedded directly into every page (not via client-side
+  include) so Google and LLMs always see the full HTML. The Webflow MCP agent
+  should turn each block into a Webflow Component:
+
+    - <head> JSON-LD blocks  →  Project Settings > Custom Code > Head (global)
+    - SITE HEADER block      →  Webflow Component "Site Header"
+    - SITE FOOTER block      →  Webflow Component "Site Footer"
+-->
+
+
+<!-- ============================================================
+     GLOBAL JSON-LD — Pegar en Webflow Project Settings >
+     Custom Code > Head Code (applies to all pages)
+     ============================================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollegeOrUniversity",
+  "@id": "https://atlantisuniversity.edu/#organization",
+  "name": "Atlantis University",
+  "url": "https://atlantisuniversity.edu/",
+  "logo": "https://atlantisuniversity.edu/logo.png",
+  "description": "ACCSC-accredited university in Doral, Miami offering on-campus, hybrid, and online bachelor's, master's, and certificate programs for U.S. and international students.",
+  "foundingDate": "2010",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1442 NW 107th Ave, Suite 400",
+    "addressLocality": "Doral",
+    "addressRegion": "FL",
+    "postalCode": "33172",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-305-555-1234",
+  "email": "admissions@atlantisuniversity.edu",
+  "sameAs": [
+    "https://www.linkedin.com/school/atlantis-university/",
+    "https://www.facebook.com/atlantisuniversity",
+    "https://www.instagram.com/atlantisuniversity"
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Accreditation",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "Accrediting Commission of Career Schools and Colleges (ACCSC)"
+    }
+  },
+  "areaServed": ["US", "LATAM", "Caribbean"],
+  "knowsLanguage": ["en", "es"]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://atlantisuniversity.edu/#website",
+  "url": "https://atlantisuniversity.edu/",
+  "name": "Atlantis University",
+  "publisher": { "@id": "https://atlantisuniversity.edu/#organization" },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://atlantisuniversity.edu/programs?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "inLanguage": ["en", "es"]
+}
+</script>
+
+
+<!-- ============================================================
+     SITE HEADER — Webflow Component "Site Header"
+     Add aria-current="page" to the active link on each page
+     ============================================================ -->
+
+<header class="site-header" role="banner">
+  <div class="container site-header__inner">
+    <a href="/" class="site-header__brand" aria-label="Atlantis University home">
+      Atlantis<span>University</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary">
+      <a href="/programs">Programs</a>
+      <a href="/admissions">Admissions</a>
+      <a href="/international">International</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="/admissions#request-info" class="site-header__request">Request info</a>
+      <a href="/admissions#apply" class="site-header__apply">Apply now</a>
+      <button type="button" class="site-header__search" aria-label="Open search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.3-4.3" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<!-- ============================================================
+     SITE FOOTER — Webflow Component "Site Footer"
+     ============================================================ -->
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">Atlantis University</p>
+        <p class="site-footer__about">An accredited Miami university offering on-campus, hybrid, and online degree programs in business, technology, health, engineering, education, and languages.</p>
+        <address class="site-footer__address">
+          1442 NW 107th Ave, Suite 400<br />
+          Doral, FL 33172, United States<br />
+          +1 (305) 555-1234
+        </address>
+      </div>
+      <div class="site-footer__col">
+        <h4>Schools</h4>
+        <ul>
+          <li><a href="/schools/business">Business</a></li>
+          <li><a href="/schools/technology">Technology</a></li>
+          <li><a href="/schools/health">Health</a></li>
+          <li><a href="/schools/engineering">Engineering</a></li>
+          <li><a href="/schools/education">Education</a></li>
+          <li><a href="/schools/languages">Languages</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4>University</h4>
+        <ul>
+          <li><a href="/admissions">Admissions</a></li>
+          <li><a href="/international">International Students</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>© 2026 Atlantis University. All rights reserved.</p>
+      <p>Accredited by ACCSC · Authorized by the Florida Department of Education</p>
+    </div>
+  </div>
+</footer>
