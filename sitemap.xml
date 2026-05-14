@@ -25,6 +25,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://atlantisuniversity.edu/schools/technology</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://atlantisuniversity.edu/schools/engineering</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://atlantisuniversity.edu/schools/health</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://atlantisuniversity.edu/schools/education</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://atlantisuniversity.edu/admissions</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
