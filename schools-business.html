@@ -49,11 +49,16 @@
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Atlantis University School of Business — programs",
+    "numberOfItems": 8,
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "url": "https://atlantisuniversity.edu/programs/bba-business-administration-miami", "name": "Bachelor of Business Administration" },
+      { "@type": "ListItem", "position": 1, "url": "https://atlantisuniversity.edu/programs/ms-business-administration", "name": "MS in Business Administration" },
       { "@type": "ListItem", "position": 2, "url": "https://atlantisuniversity.edu/programs/mba-miami", "name": "Master of Business Administration (MBA)" },
-      { "@type": "ListItem", "position": 3, "url": "https://atlantisuniversity.edu/programs/international-business-miami", "name": "International Business" },
-      { "@type": "ListItem", "position": 4, "url": "https://atlantisuniversity.edu/programs/accounting-miami", "name": "Accounting" }
+      { "@type": "ListItem", "position": 3, "url": "https://atlantisuniversity.edu/programs/ms-real-estate-development", "name": "MS in Real Estate Development" },
+      { "@type": "ListItem", "position": 4, "url": "https://atlantisuniversity.edu/programs/ms-hospitality-management", "name": "MS in Hospitality Management" },
+      { "@type": "ListItem", "position": 5, "url": "https://atlantisuniversity.edu/programs/bs-business-administration", "name": "BS in Business Administration" },
+      { "@type": "ListItem", "position": 6, "url": "https://atlantisuniversity.edu/programs/bs-sports-management", "name": "BS in Sports Management" },
+      { "@type": "ListItem", "position": 7, "url": "https://atlantisuniversity.edu/programs/as-business-administration", "name": "AS in Business Administration" },
+      { "@type": "ListItem", "position": 8, "url": "https://atlantisuniversity.edu/programs/as-international-business", "name": "AS in International Business" }
     ]
   }
   </script>
@@ -96,7 +101,11 @@
       border-radius: var(--radius-pill); color: var(--color-muted-foreground);
     }
     .pcard__title { margin-top: 1rem; font-size: 1.25rem; line-height: 1.25; }
+    .pcard__credential { margin-top: 0.5rem; font-size: var(--fs-small); color: var(--color-muted-foreground); }
     .pcard__desc { margin-top: 1rem; font-size: var(--fs-small); color: var(--color-muted-foreground); line-height: 1.65; }
+    .pcard__meta { margin-top: 1.25rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; font-size: 0.75rem; }
+    .pcard__meta dt { color: var(--color-muted-foreground); }
+    .pcard__meta dd { font-weight: 500; margin-top: 0.125rem; font-variant-numeric: tabular-nums; }
     .pcard__cta { margin-top: 1.5rem; font-size: var(--fs-small); font-weight: 500; }
     .pcard:hover .pcard__cta { text-decoration: underline; text-underline-offset: 4px; }
   </style>
@@ -144,33 +153,77 @@
       <div class="container">
         <h2 id="programs-heading" class="sr-only">Programs in the School of Business</h2>
         <div class="programs-list">
-          <a href="/programs/bba-business-administration-miami" class="pcard">
-            <div class="pcard__bar"></div>
-            <div class="pcard__head"><span></span><span class="pcard__level">Bachelor's</span></div>
-            <h3 class="pcard__title">Bachelor of Business Administration (BBA)</h3>
-            <p class="pcard__desc">120-credit BBA covering management, finance, marketing, and international business — designed for the bilingual South Florida economy.</p>
-            <span class="pcard__cta">View BBA program details →</span>
+          <a href="/programs/ms-business-administration" class="pcard" data-level="Master">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span></span><span class="pcard__level">Master</span></div>
+            <h3 class="pcard__title">MS in Business Administration</h3>
+            <p class="pcard__credential">Master of Science · 30 credits</p>
+            <p class="pcard__desc">Graduate business degree covering management, finance, marketing, and operations for professionals advancing into managerial roles.</p>
+            <dl class="pcard__meta"><div><dt>Duration</dt><dd>20 months</dd></div><div><dt>Total tuition</dt><dd>$26,910</dd></div></dl>
+            <span class="pcard__cta">View MS Business Administration details →</span>
           </a>
-          <a href="/programs/mba-miami" class="pcard">
-            <div class="pcard__bar"></div>
-            <div class="pcard__head"><span></span><span class="pcard__level">Master's</span></div>
+          <a href="/programs/mba-miami" class="pcard" data-level="Master">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span></span><span class="pcard__level">Master</span></div>
             <h3 class="pcard__title">Master of Business Administration (MBA)</h3>
-            <p class="pcard__desc">36-credit hybrid MBA in Miami built for working professionals. Evening classes in Miami combined with online coursework. No GMAT required.</p>
+            <p class="pcard__credential">Master of Business Administration · 45 credits</p>
+            <p class="pcard__desc">Hybrid MBA in Miami built for working professionals. Evening classes combined with online coursework. No GMAT required.</p>
+            <dl class="pcard__meta"><div><dt>Duration</dt><dd>24 months</dd></div><div><dt>Total tuition</dt><dd>$40,365</dd></div></dl>
             <span class="pcard__cta">View MBA program details →</span>
           </a>
-          <a href="/programs/international-business-miami" class="pcard">
-            <div class="pcard__bar"></div>
-            <div class="pcard__head"><span></span><span class="pcard__level">Bachelor's</span></div>
-            <h3 class="pcard__title">International Business</h3>
-            <p class="pcard__desc">BBA concentration covering cross-border trade, Latin American markets, global supply chains, and international finance.</p>
-            <span class="pcard__cta">View International Business details →</span>
+          <a href="/programs/ms-real-estate-development" class="pcard" data-level="Master">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span></span><span class="pcard__level">Master</span></div>
+            <h3 class="pcard__title">MS in Real Estate Development</h3>
+            <p class="pcard__credential">Master of Science · 30 credits</p>
+            <p class="pcard__desc">Real estate finance, development, and investment — leveraging Miami's position as a hub for U.S.–LATAM real estate capital.</p>
+            <dl class="pcard__meta"><div><dt>Duration</dt><dd>12 months</dd></div><div><dt>Total tuition</dt><dd>$26,910</dd></div></dl>
+            <span class="pcard__cta">View MS Real Estate Development details →</span>
           </a>
-          <a href="/programs/accounting-miami" class="pcard">
-            <div class="pcard__bar"></div>
-            <div class="pcard__head"><span></span><span class="pcard__level">Bachelor's</span></div>
-            <h3 class="pcard__title">Accounting</h3>
-            <p class="pcard__desc">BBA concentration in financial reporting, auditing, taxation, and managerial accounting with U.S. GAAP foundations.</p>
-            <span class="pcard__cta">View Accounting details →</span>
+          <a href="/programs/ms-hospitality-management" class="pcard" data-level="Master">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span></span><span class="pcard__level">Master</span></div>
+            <h3 class="pcard__title">MS in Hospitality Management</h3>
+            <p class="pcard__credential">Master of Science · 36 credits</p>
+            <p class="pcard__desc">Preparing leaders for hotels, restaurants, and tourism operations in Miami and global hospitality markets.</p>
+            <dl class="pcard__meta"><div><dt>Duration</dt><dd>16 months</dd></div><div><dt>Total tuition</dt><dd>$32,292</dd></div></dl>
+            <span class="pcard__cta">View MS Hospitality Management details →</span>
+          </a>
+          <a href="/programs/bs-business-administration" class="pcard" data-level="Bachelor">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span></span><span class="pcard__level">Bachelor</span></div>
+            <h3 class="pcard__title">BS in Business Administration</h3>
+            <p class="pcard__credential">Bachelor of Science · 123 credits</p>
+            <p class="pcard__desc">Career-focused bachelor's covering management, accounting, marketing, and international business with bilingual support.</p>
+            <dl class="pcard__meta"><div><dt>Duration</dt><dd>41 months</dd></div><div><dt>Total tuition</dt><dd>$55,350</dd></div></dl>
+            <span class="pcard__cta">View BS Business Administration details →</span>
+          </a>
+          <a href="/programs/bs-sports-management" class="pcard" data-level="Bachelor">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span></span><span class="pcard__level">Bachelor</span></div>
+            <h3 class="pcard__title">BS in Sports Management</h3>
+            <p class="pcard__credential">Bachelor of Science · 123 credits</p>
+            <p class="pcard__desc">Bachelor's for careers in sports operations, marketing, and front-office management — South Florida is a top U.S. sports market.</p>
+            <dl class="pcard__meta"><div><dt>Duration</dt><dd>41 months</dd></div><div><dt>Total tuition</dt><dd>$55,350</dd></div></dl>
+            <span class="pcard__cta">View BS Sports Management details →</span>
+          </a>
+          <a href="/programs/as-business-administration" class="pcard" data-level="Associate">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span></span><span class="pcard__level">Associate</span></div>
+            <h3 class="pcard__title">AS in Business Administration</h3>
+            <p class="pcard__credential">Associate of Science · 60 credits</p>
+            <p class="pcard__desc">Two-year associate degree giving foundational business skills, stackable toward the BS Business Administration.</p>
+            <dl class="pcard__meta"><div><dt>Duration</dt><dd>20 months</dd></div><div><dt>Total tuition</dt><dd>$27,000</dd></div></dl>
+            <span class="pcard__cta">View AS Business Administration details →</span>
+          </a>
+          <a href="/programs/as-international-business" class="pcard" data-level="Associate">
+            <div class="pcard__bar" style="background: var(--school-business);"></div>
+            <div class="pcard__head"><span></span><span class="pcard__level">Associate</span></div>
+            <h3 class="pcard__title">AS in International Business</h3>
+            <p class="pcard__credential">Associate of Science · 60 credits</p>
+            <p class="pcard__desc">Associate degree focusing on cross-border trade, Latin American markets, and Miami's bilingual workforce needs.</p>
+            <dl class="pcard__meta"><div><dt>Duration</dt><dd>20 months</dd></div><div><dt>Total tuition</dt><dd>$27,000</dd></div></dl>
+            <span class="pcard__cta">View AS International Business details →</span>
           </a>
         </div>
       </div>
