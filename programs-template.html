@@ -40,14 +40,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
 
   <title>{{program.meta_title}} | Atlantis University</title>
   <meta name="description" content="{{program.meta_description}}" />
   <link rel="canonical" href="https://atlantisuniversity.edu/programs/{{program.slug}}" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://atlantisuniversity.edu/programs/{{program.slug}}" />
   <meta property="og:title" content="{{program.name}} — Atlantis University" />
   <meta property="og:description" content="{{program.meta_description}}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{program.name}} — Atlantis University" />
+  <meta name="twitter:description" content="{{program.meta_description}}" />
 
   <!-- Program JSON-LD (CMS-bound) -->
   <script type="application/ld+json">
