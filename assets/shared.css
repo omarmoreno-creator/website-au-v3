@@ -33,7 +33,7 @@
   --radius-pill: 9999px;
 
   /* Type scale (fluid) */
-  --fs-h1: clamp(2.75rem, 1.5rem + 4vw, 4.75rem);
+  --fs-h1: clamp(3rem, 1.5rem + 6vw, 7.5rem);
   --fs-h2: clamp(1.875rem, 1.25rem + 2vw, 2.75rem);
   --fs-h3: clamp(1.25rem, 1rem + 0.5vw, 1.5rem);
   --fs-lead: clamp(1.0625rem, 1rem + 0.25vw, 1.25rem);
@@ -382,3 +382,79 @@ ul { list-style: none; }
 .divider-strong { border-top: 1px solid var(--color-border-strong); }
 .text-center { text-align: center; }
 .mt-auto { margin-top: auto; }
+
+/* ==========================================================================
+   Hero photo modifier (home hero with background image)
+   ========================================================================== */
+
+.hero--photo {
+  position: relative;
+  isolation: isolate;
+  color: var(--color-background);
+  background-color: #0d1117;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 0;
+  overflow: hidden;
+}
+.hero--photo::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(13,17,23,0.35), rgba(13,17,23,0.55) 55%, rgba(13,17,23,0.85));
+  z-index: -1;
+}
+.hero--photo .hero__title { color: #fff; max-width: 22ch; }
+.hero--photo .hero__location,
+.hero--photo .hero__lead,
+.hero--photo .hero__fineprint { color: rgba(255,255,255,0.88); }
+.hero--photo .hero__location-rule { background: rgba(255,255,255,0.6); }
+.hero--photo .hero__facts {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.hero--photo .hero__facts-title { color: rgba(255,255,255,0.6); }
+.hero--photo .hero__facts dt { color: rgba(255,255,255,0.7); }
+.hero--photo .hero__facts dd { color: #fff; }
+.hero--photo .hero__facts-row { border-color: rgba(255,255,255,0.15); }
+.hero--photo .btn--primary { background: #fff; color: var(--color-foreground); }
+.hero--photo .btn--primary:hover { background: rgba(255,255,255,0.9); transform: translateY(-1px); }
+.hero--photo .btn--secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,0.4); }
+.hero--photo .btn--secondary:hover { background: rgba(255,255,255,0.08); }
+.hero--photo .btn--ghost { color: rgba(255,255,255,0.85); }
+.hero--photo .btn--ghost:hover { color: #fff; }
+
+/* ==========================================================================
+   Authority badge bar (logos of accreditation, grayscale)
+   ========================================================================== */
+
+.authority-bar {
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  padding: 2.5rem 0;
+}
+.authority-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+@media (min-width: 768px) { .authority-bar__grid { grid-template-columns: repeat(4, 1fr); gap: 2rem; } }
+.authority-bar__item {
+  display: flex; flex-direction: column; gap: 0.3rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-border-strong);
+}
+.authority-bar__name {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 500;
+  color: var(--color-foreground);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.authority-bar__detail {
+  font-size: 0.6875rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--color-muted-foreground);
+}
