@@ -539,3 +539,60 @@ ul { list-style: none; }
   .hero__decoration { top: -3rem; right: 4rem; }
 }
 .hero--photo .container { position: relative; z-index: 1; }
+
+/* ==========================================================================
+   CLEAN LOOK OVERRIDES — based on reference design
+   White header (not red), serif headlines, red eyebrows, hide utility/decor
+   ========================================================================== */
+
+/* Headlines back to serif (Fraunces) */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+/* Eyebrow accents in brand red (was muted gray) */
+.eyebrow { color: var(--color-brand); }
+
+/* Site header: white background, dark nav, red CTA only */
+.site-header {
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-foreground);
+}
+.site-header__brand { color: var(--color-foreground); }
+.site-header__mark {
+  background: var(--color-brand); color: #fff;
+  border: none;
+  font-size: 0.85rem; letter-spacing: 0.04em;
+}
+.site-header__brand-divider { background: var(--color-border); }
+.site-header__wordmark { color: var(--color-foreground); font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; }
+.site-header__wordmark em { color: var(--color-muted-foreground); font-weight: 400; }
+.site-header__nav a { color: var(--color-muted-foreground); border-bottom-color: transparent; }
+.site-header__nav a:hover, .site-header__nav a[aria-current="page"] { color: var(--color-foreground); border-bottom-color: var(--color-foreground); }
+.site-header__request { color: var(--color-muted-foreground); }
+.site-header__request:hover { background: var(--color-sand); color: var(--color-foreground); }
+.site-header__apply { background: var(--color-brand); color: #fff; }
+.site-header__apply:hover { background: var(--color-brand-hover); }
+.site-header__search { color: var(--color-foreground); }
+.site-header__search:hover { background: var(--color-sand); }
+
+/* Hide utility bar and hero decoration to match the cleaner reference */
+.utility-bar { display: none; }
+.utility-bar + .site-header { top: 0; }
+.hero__decoration { display: none; }
+
+/* Lighter hero overlay so photo shows through more (reference is less heavy) */
+.hero--photo::before {
+  background: linear-gradient(180deg, rgba(13,17,23,0.45), rgba(13,17,23,0.65) 55%, rgba(13,17,23,0.85));
+}
+
+/* Cards on subtle sand/cream background (was bare white) */
+.card, .pcard { background: var(--color-sand); }
+
+/* Dark sections use deep navy instead of pure black (reference is navy) */
+.finalcta { background: #1c2540; }

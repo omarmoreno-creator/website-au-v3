@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/shared.css?v=5" />
+  <link rel="stylesheet" href="assets/shared.css?v=6" />
 
   <style>
     .mission-grid { display: grid; gap: 3rem; padding: 5rem 0; border-bottom: 1px solid var(--color-border); }
@@ -39,21 +39,21 @@
     .mission-grid h2 { margin-bottom: 1rem; }
     .mission-grid p { color: var(--color-muted-foreground); line-height: 1.7; }
 
-    .stats { background: var(--color-foreground); color: var(--color-background); padding: 6rem 0 7rem; border-bottom: 1px solid var(--color-border); }
-    .stats h2 { margin-bottom: 4rem; color: #fff; }
-    .stats__grid { display: grid; gap: 3rem 2rem; }
+    .stats { background: #1c2540; color: var(--color-background); padding: 5rem 0; border-bottom: 1px solid var(--color-border); }
+    .stats h2 { margin-bottom: 3rem; color: #fff; }
+    .stats__grid { display: grid; gap: 2.5rem 2rem; }
     @media (min-width: 480px) { .stats__grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 768px) { .stats__grid { grid-template-columns: repeat(4, 1fr); gap: 4rem 2rem; } }
-    .stat { border-top: 2px solid rgba(255,255,255,0.2); padding-top: 1.5rem; }
-    .stat__num { font-family: var(--font-display); font-size: clamp(4.5rem, 13vw, 11rem); font-weight: 400; line-height: 0.9; letter-spacing: -0.04em; color: #fff; }
-    .stat__label { margin-top: 1rem; font-size: var(--fs-small); color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; }
+    @media (min-width: 768px) { .stats__grid { grid-template-columns: repeat(4, 1fr); gap: 3rem 2rem; } }
+    .stat { border-top: 1px solid rgba(255,255,255,0.18); padding-top: 1.25rem; }
+    .stat__num { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 5rem); font-weight: 500; line-height: 1; letter-spacing: -0.025em; color: #fff; }
+    .stat__label { margin-top: 0.75rem; font-size: var(--fs-small); color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; }
   </style>
 </head>
 
 <body>
   <div class="utility-bar" role="complementary" aria-label="Utility menu"><div class="container utility-bar__inner"><a href="#" class="utility-bar__link">Online Campus</a><a href="#" class="utility-bar__link">Student Portal</a><a href="admissions.html#request-info" class="utility-bar__link">Request Info</a><a href="#" class="utility-bar__link">Help Desk</a><span class="utility-bar__lang">EN · ES</span></div></div><header class="site-header" role="banner">
     <div class="container site-header__inner">
-      <a href="index.html" class="site-header__brand" aria-label="Atlantis University home"><span class="site-header__mark" aria-hidden="true">A</span><span class="site-header__brand-divider" aria-hidden="true"></span><span class="site-header__wordmark">Atlantis<em>University</em></span></a>
+      <a href="index.html" class="site-header__brand" aria-label="Atlantis University home"><span class="site-header__mark" aria-hidden="true">AU</span><span class="site-header__brand-divider" aria-hidden="true"></span><span class="site-header__wordmark">Atlantis<em>University</em></span></a>
       <nav class="site-header__nav" aria-label="Primary">
         <a href="programs.html">Programs</a>
         <a href="admissions.html">Admissions</a>
